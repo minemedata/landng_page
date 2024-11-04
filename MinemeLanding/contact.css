@@ -13,20 +13,27 @@
 .contact-hero {
     background: linear-gradient(135deg, #f8f9ff 15%, #adcaff 75%);
     padding: 120px 0 80px;
-    text-align: center;
     color: var(--primary-color);
 }
 .hero-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
-    position: relative;
-    z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: start; /* Changed from center to start */
 }
+.hero-content-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the left */
+    text-align: left;
+}
+.hero-content-right {
+    padding-top: 3rem; /* Adds space to align with the title */
+}
+
 
 /*.hero-container {
     max-width: 1000px;
@@ -35,7 +42,10 @@
 
 .contact-hero h1 {
     font-size: 3.5rem;
-    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 0;
+    color: var(--primary-blue);
+    font-weight: 700;
 }
 .hero-badge {
     display: inline-block;
@@ -54,15 +64,18 @@
     -webkit-text-fill-color: transparent;
 }
 .gradient-text {
-    background: linear-gradient(120deg, #2B3A67, #FF6B6B);
+    background: linear-gradient(120deg, var(--accent-color), #FF8E8E);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
 }
 
+
 .hero-subtitle {
     font-size: 1.25rem;
-    opacity: 0.9;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
 }
 
 /* Contact Section */
@@ -273,6 +286,12 @@ input:focus, textarea:focus {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .hero-container {
+        gap: 2rem;
+    }
+    .contact-hero h1 {
+        font-size: 3rem;
+    }
 
     .contact-container {
         grid-template-columns: 1fr;
@@ -294,5 +313,26 @@ input:focus, textarea:focus {
 
     .contact-form-wrapper {
         padding: 24px;
+    }
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .hero-content-left,
+    .hero-content-right {
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-content-right {
+        padding-top: 1rem;
+    }
+
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
     }
 }
