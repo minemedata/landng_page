@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MineMe | Pricing</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pricing.css">
+  <link rel="icon" href="mineme_logo.png">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('navbar.html')
+              .then(response => response.text())
+              .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                // Highlight current page in navigation
+                const currentPage = window.location.pathname.split('/').pop();
+                const navLinks = document.querySelectorAll('.nav-links a');
+                navLinks.forEach(link => {
+                  if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                  }
+                });
+              });
+    });
+  </script>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<!-- Pricing Hero -->
+<section class="plan-benefits">
+  <div class="benefits-container">
+    <h2>Options for every business</h2>
+    <p>Plans & prices designed to help you find just what you need and get the most out of MineMe.</p>
+
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M14 3v4a1 1 0 0 0 1 1h4" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <span>No long-term contracts</span>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M19 12a7 7 0 1 1-14 0 7 7 0 0 1 14 0z" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <span>Award-winning customer support</span>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="9" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <span>Expert onboarding</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Grid -->
+<section class="pricing-grid">
+  <div class="container">
+    <!-- Starter Plan -->
+    <div class="pricing-card">
+      <div class="card-header">
+        <h2>Starter</h2>
+        <div class="price">Free</div>
+        <p>For individuals and teams getting started</p>
+      </div>
+      <div class="card-cta">
+        <a href="/signup" class="start-btn">Start for Free</a>
+      </div>
+      <div class="card-features">
+        <h3>Our free Starter plan includes:</h3>
+        <ul>
+          <li>Up to 50K monthly tracked users</li>
+          <li>Basic analytics dashboard</li>
+          <li>Customer data centralization</li>
+          <li>Core automation features</li>
+          <li>Basic integrations</li>
+          <li>Community support</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Plus Plan -->
+    <div class="pricing-card featured">
+      <div class="card-header">
+        <h2>Plus</h2>
+        <div class="price">Contact Sales</div>
+        <p>For growing teams scaling their impact</p>
+      </div>
+      <div class="card-cta">
+        <a href="/demo" class="start-btn">Get Started</a>
+      </div>
+      <div class="card-features">
+        <h3>Everything in Starter, and:</h3>
+        <ul>
+          <li>Up to 300K monthly tracked users</li>
+          <li>Advanced analytics</li>
+          <li>Behavioral cohorts</li>
+          <li>Custom dashboards</li>
+          <li>API access</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Growth Plan -->
+    <div class="pricing-card">
+      <div class="card-header">
+        <h2>Growth</h2>
+        <div class="price">Contact Sales</div>
+        <p>For businesses looking to scale their services
+
+        </p>
+      </div>
+      <div class="card-cta">
+        <a href="contact.html" class="contact-btn">Contact Us</a>
+      </div>
+      <div class="card-features">
+        <h3>Everything in Plus, and:</h3>
+        <ul>
+          <li>Custom user volume</li>
+          <li>Advanced AI insights</li>
+          <li>Custom integrations</li>
+          <li>Advanced automation</li>
+          <li>Dedicated success manager</li>
+          <li>24/7 premium support</li>
+        </ul>
+      </div>
+    </div>
+
+
+  <div class="pricing-card enterprise">
+    <div class="card-header">
+      <h2>Enterprise</h2>
+      <div class="price">Custom Pricing</div>
+      <p>For organizations requiring advanced features & support</p>
+    </div>
+    <div class="card-cta">
+      <a href="/contact" class="contact-btn">Contact Sales</a>
+    </div>
+    <div class="card-features">
+      <h3>Everything in Growth, and:</h3>
+      <ul>
+        <li>Unlimited tracked users</li>
+        <li>Advanced AI insights</li>
+        <li>Custom integrations</li>
+        <li>Dedicated success manager</li>
+        <li>24/7 premium support</li>
+        <li>SSO & advanced security</li>
+        <li>Multi-product analytics</li>
+        <li>Custom data retention</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- Startup Program -->
+
+<!-- Features Included -->
+<section class="integrations">
+  <div class="integrations-container">
+    <h2>Integrations to help grow your business</h2>
+    <div class="integration-categories">
+      <span>Analytics</span>
+      <span>CRM</span>
+      <span>Marketing</span>
+      <span>Sales</span>
+    </div>
+    <div class="integration-logos">
+      <!-- Add your integration partner logos here -->
+      <img src="Gmail_Logo_512px.png" alt="Partner">
+      <img src="Snowflake_Logo.png" alt="Partner">
+      <img src="Salesforce.png" alt="Partner">
+      <img src="WhatsApp.png" alt="Partner">
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<!-- Global CTA Section -->
+<section class="global-cta">
+  <div class="cta-container">
+    <h2>Ready to Transform Your Data?</h2>
+    <p>Join our platform and revolutionize how you manage consumer relationships</p>
+    <div class="cta-buttons">
+      <a href="demo.html" class="primary-btn">Schedule Demo</a>
+      <a href="/trial" class="secondary-btn">Sign Up</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>MineMe</h4>
+      <ul>
+        <li><a href="platform.html">Platform Overview</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="cases.html">Use Cases</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="platform.html">Overview</a></li>
+        <li><a href="automation.html">Integration</a></li>
+        <li><a href="enterprise.html">Enterprise</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="updates.html">Platform Updates</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="privacy.html">Privacy & Terms</a></li>
+        <li><a href="cookies.html">Cookie Policy</a></li>
+        <li><a href="status.html">System Status</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="social-icons">
+      <a href="mailto:contact@mineme.com">
+        <img src="mailicon.svg" alt="Email" class="social-icon">
+      </a>
+      <a href="https://linkedin.com/company/mineme" target="_blank">
+        <img src="linkedinicon.svg" alt="LinkedIn" class="social-icon">
+      </a>
+      <a href="https://x.com/mineme" target="_blank">
+        <img src="xicon.svg" alt="X" class="social-icon">
+      </a>
+      <a href="https://instagram.com/mineme" target="_blank">
+        <img src="instaicon.svg" alt="Instagram" class="social-icon">
+      </a>
+      <a href="https://tiktok.com/@mineme" target="_blank">
+        <img src="youtubeicon.svg" alt="Youtube" class="social-icon">
+      </a>
+    </div>
+    <p class="copyright">© 2024 MineMe. All rights reserved.</p>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

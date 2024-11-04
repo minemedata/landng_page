@@ -1,0 +1,219 @@
+/* blog.css */
+:root {
+    --primary-color: #2B3A67;
+    --secondary-color: #496A81;
+    --accent-color: #FF6B6B;
+    --background-light: #f8f9fc;
+    --text-primary: #2c3e50;
+    --text-secondary: #64748b;
+}
+/* Blog Hero */
+.blog-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 120px 0 80px;
+    color: white;
+    text-align: center;
+}
+.search-container {
+    max-width: 600px;
+    margin: 40px auto 0;
+    position: relative;
+}
+.search-container input {
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+.search-container button {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+.blog-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Featured Post */
+.featured-article {
+    padding: 80px 0;
+    background: var(--background-light);
+}
+
+
+.featured-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.meta-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.featured-image {
+    height: 100%;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-content {
+    padding: 3rem;
+}
+
+.category {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--accent-color);
+    color: var(--white);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.featured-content h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 0.875rem;
+    color: var(--secondary-color);
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover {
+    transform: translateX(5px);
+}
+.article-grid {
+    padding: 80px 0;
+}
+.grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.article-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+.newsletter {
+    background: var(--primary-color);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 16px;
+    max-width: 500px;
+    margin: 40px auto 0;
+}
+/* Blog Grid */
+.blog-grid {
+    padding: 4rem 2rem;
+    background: var(--light-bg);
+}
+
+.blog-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: var(--white);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.post-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform}
+
+@media (max-width: 768px) {
+    .featured-card {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+}

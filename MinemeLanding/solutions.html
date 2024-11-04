@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MineMe | Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="solutions.css">
+  <link rel="icon" href="mineme_logo.png">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('navbar.html')
+              .then(response => response.text())
+              .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                // Highlight current page in navigation
+                const currentPage = window.location.pathname.split('/').pop();
+                const navLinks = document.querySelectorAll('.nav-links a');
+                navLinks.forEach(link => {
+                  if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                  }
+                });
+              });
+    });
+  </script>
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+
+<!-- Solutions Hero -->
+<section class="solutions-hero">
+  <div class="solutions-hero-container">
+    <h1>Industry-Specific Solutions</h1>
+    <p>Transform your business challenges into opportunities with data-driven solutions</p>
+  </div>
+</section>
+
+<!-- Industry Solutions Grid -->
+<section class="industry-solutions">
+  <div class="solutions-grid">
+    <div class="solution-card financial">
+      <div class="solution-content">
+        <h2>Financial Services</h2>
+        <div class="solution-details">
+          <h3>Key Capabilities:</h3>
+          <ul>
+            <li>Risk Analysis & Fraud Detection</li>
+            <li>Trading Analytics</li>
+            <li>Customer Behavior Insights</li>
+            <li>Regulatory Compliance</li>
+          </ul>
+          <a href="#financial" class="learn-more">Learn More →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="solution-card healthcare">
+      <div class="solution-content">
+        <h2>Healthcare</h2>
+        <div class="solution-details">
+          <h3>Key Capabilities:</h3>
+          <ul>
+            <li>Patient Data Analytics</li>
+            <li>Treatment Optimization</li>
+            <li>Operational Efficiency</li>
+            <li>Predictive Care Models</li>
+          </ul>
+          <a href="#healthcare" class="learn-more">Learn More →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="solution-card retail">
+      <div class="solution-content">
+        <h2>Retail & E-commerce</h2>
+        <div class="solution-details">
+          <h3>Key Capabilities:</h3>
+          <ul>
+            <li>Customer Journey Analytics</li>
+            <li>Inventory Optimization</li>
+            <li>Demand Forecasting</li>
+            <li>Personalization Engine</li>
+          </ul>
+          <a href="#retail" class="learn-more">Learn More →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="solution-card manufacturing">
+      <div class="solution-content">
+        <h2>Manufacturing</h2>
+        <div class="solution-details">
+          <h3>Key Capabilities:</h3>
+          <ul>
+            <li>Supply Chain Optimization</li>
+            <li>Predictive Maintenance</li>
+            <li>Quality Control Analytics</li>
+            <li>Resource Management</li>
+          </ul>
+          <a href="#manufacturing" class="learn-more">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Detailed Solutions -->
+<section id="financial" class="solution-detail">
+  <div class="detail-container">
+    <h2>Financial Services Solutions</h2>
+    <p>Empower your financial institution with advanced analytics and automation</p>
+    <div class="detail-grid">
+      <div class="detail-feature">
+        <h3>Risk Management</h3>
+        <p>Advanced predictive models for comprehensive risk assessment and fraud detection</p>
+      </div>
+      <div class="detail-feature">
+        <h3>Customer Intelligence</h3>
+        <p>Deep insights into customer behavior and preferences for personalized services</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Solution CTA -->
+<!-- Global CTA Section -->
+<section class="global-cta">
+  <div class="cta-container">
+    <h2>Ready to Transform Your Data?</h2>
+    <p>Join our platform and revolutionize how you manage consumer relationships</p>
+    <div class="cta-buttons">
+      <a href="demo.html" class="primary-btn">Schedule Demo</a>
+      <a href="/trial" class="secondary-btn">Sign Up</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>MineMe</h4>
+      <ul>
+        <li><a href="platform.html">Platform Overview</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="cases.html">Use Cases</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="platform.html">Overview</a></li>
+        <li><a href="automation.html">Integration</a></li>
+        <li><a href="enterprise.html">Enterprise</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="updates.html">Platform Updates</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="privacy.html">Privacy & Terms</a></li>
+        <li><a href="cookies.html">Cookie Policy</a></li>
+        <li><a href="status.html">System Status</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="social-icons">
+      <a href="mailto:contact@mineme.com">
+        <img src="mailicon.svg" alt="Email" class="social-icon">
+      </a>
+      <a href="https://linkedin.com/company/mineme" target="_blank">
+        <img src="linkedinicon.svg" alt="LinkedIn" class="social-icon">
+      </a>
+      <a href="https://x.com/mineme" target="_blank">
+        <img src="xicon.svg" alt="X" class="social-icon">
+      </a>
+      <a href="https://instagram.com/mineme" target="_blank">
+        <img src="instaicon.svg" alt="Instagram" class="social-icon">
+      </a>
+      <a href="https://tiktok.com/@mineme" target="_blank">
+        <img src="youtubeicon.svg" alt="Youtube" class="social-icon">
+      </a>
+    </div>
+    <p class="copyright">© 2024 MineMe. All rights reserved.</p>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+/* Solutions Page Styles */
+.solutions-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 8rem 2rem 4rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.solutions-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Industry Solutions Grid */
+.industry-solutions {
+    padding: 4rem 2rem;
+    background: var(--light-bg);
+}
+
+.solutions-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.solution-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+}
+
+.solution-content {
+    padding: 2rem;
+}
+
+.solution-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.solution-details ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.solution-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.solution-details li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* Detailed Solutions */
+.solution-detail {
+    padding: 6rem 2rem;
+    background: var(--white);
+}
+
+.detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Success Stories */
+.success-stories {
+    padding: 6rem 2rem;
+    background: var(--light-bg);
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.story-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.story-content {
+    padding: 2rem;
+}
+
+.industry-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--light-bg);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+
+/* Solution CTA */
+.solution-cta {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .solutions-grid,
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .solutions-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+}

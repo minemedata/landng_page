@@ -1,0 +1,145 @@
+/* careers.css */
+
+/* Careers Hero */
+.careers-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 8rem 2rem 4rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.careers-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.careers-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 4rem 2rem;
+    background: var(--white);
+    text-align: center;
+}
+
+.mission-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+/* Departments Section */
+.departments-section {
+    padding: 6rem 2rem;
+    background: var(--light-bg);
+}
+
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.department-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.department-card:hover {
+    transform: translateY(-5px);
+}
+
+.department-header h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.position-list {
+    margin: 1.5rem 0;
+}
+
+.position-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.position-list li {
+    padding: 0.5rem 0;
+    color: var(--secondary-color);
+}
+
+.department-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.department-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(43,58,103,0.2);
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 6rem 2rem;
+    background: var(--white);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--light-bg);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .departments-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .careers-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}

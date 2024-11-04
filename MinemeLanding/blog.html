@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MineMe - Blog & Insights</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="blog.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('navbar.html')
+              .then(response => response.text())
+              .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                // Highlight current page in navigation
+                const currentPage = window.location.pathname.split('/').pop();
+                const navLinks = document.querySelectorAll('.nav-links a');
+                navLinks.forEach(link => {
+                  if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                  }
+                });
+              });
+    });
+  </script>
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+
+<!-- Blog Hero -->
+<section class="blog-hero">
+  <div class="hero-container">
+    <h1>MineMemoir</h1>
+    <p>Understanding data rights and the evolving landscape of personal information in the digital age</p>
+    <div class="search-container">
+      <input type="search" placeholder="Search articles...">
+      <button type="submit">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Article -->
+<section class="featured-article">
+  <div class="container">
+    <div class="featured-card">
+      <div class="card-content">
+        <div class="meta-tag">Latest Post</div>
+        <h2>Understanding Personal Data in the Digital Age</h2>
+        <p>Explore how personal data has become a valuable commodity and learn about the benefits of proper data sharing practices.</p>
+        <div class="meta">
+          <span class="date">June 17, 2024</span>
+          <span class="read-time">8 min read</span>
+        </div>
+        <a href="#" class="read-more">Read Article →</a>
+      </div>
+      <div class="card-image">
+        <img src="assets/featured-data.jpg" alt="Digital Data Visualization">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Article Grid -->
+<section class="article-grid">
+  <div class="container">
+    <div class="grid-header">
+      <h2>Latest Articles</h2>
+      <div class="grid-filters">
+        <button class="filter active">All Topics</button>
+        <button class="filter">Privacy</button>
+        <button class="filter">Data Rights</button>
+        <button class="filter">Technology</button>
+        <button class="filter">Case Studies</button>
+      </div>
+    </div>
+
+    <div class="articles">
+      <!-- Repeat this article card structure for each blog post -->
+      <article class="article-card">
+        <img src="assets/zoom-privacy.jpg" alt="Zoom Privacy">
+        <div class="card-content">
+          <span class="tag">Privacy</span>
+          <h3>Zoom's Data Collection Controversy</h3>
+          <p>Exploring the implications of Zoom's updated terms of service and AI model training practices.</p>
+          <div class="meta">
+            <span class="date">August 25, 2023</span>
+            <span class="read-time">6 min read</span>
+          </div>
+        </div>
+      </article>
+      <!-- Add more article cards -->
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-content">
+      <h2>Join the Data Revolution</h2>
+      <p>Subscribe to stay informed about data privacy, rights, and the latest industry insights.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+</body>
+
+
+</html>
