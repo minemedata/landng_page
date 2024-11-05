@@ -1,17 +1,43 @@
 /* team.css */
-
+:root {
+    --primary-blue: #2B3A67;
+    --secondary-blue: #496A81;
+    --accent-coral: #FF6B6B;
+    --bg-light: #f8f9ff;
+    --text-dark: #2B3A67;
+    --text-light: #666;
+}
 /* Team Hero */
 .team-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    padding: 8rem 2rem 4rem;
-    color: var(--white);
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+    padding: 120px 0 80px;
     text-align: center;
 }
-
+.hero-container {
+    max-width: 1400px;
+    margin: 1rem auto;
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start; /* Changed from center to start */
+}
+.hero-content-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the left */
+    text-align: left;
+}
+.hero-content-right {
+    padding-right: 2rem;
+    max-width: 500px;
+    padding-top: 6rem; /* Adds space to align with the title */
+}
 .team-hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
 }
+
 
 .team-hero p {
     font-size: 1.25rem;
@@ -19,6 +45,21 @@
     max-width: 600px;
     margin: 0 auto;
 }
+.hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(43, 58, 103, 0.1);
+    border-radius: 20px;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+.gradient-highlight {
+    position: relative;
+    display: inline-block;
+}
+
 
 /* Founder Story */
 .founder-story {
@@ -34,41 +75,62 @@
 .story-text {
     text-align: center;
 }
-
-.story-text p {
-    font-size: 1.25rem;
+.mission-content h2 {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.mission-content p {
+    font-size: 1.05rem;
     line-height: 1.6;
     margin-bottom: 2rem;
+}
+.mission-section {
+    padding: 30px 0;
+    background: white;
+}
+
+.mission-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quote-container {
+    margin: 60px 0;
+    padding: 40px;
+    background: var(--bg-light);
+    border-radius: 16px;
 }
 
 blockquote {
     font-size: 1.5rem;
-    font-style: italic;
-    color: var(--primary-color);
-    border-left: 4px solid var(--accent-color);
-    padding-left: 2rem;
-    margin: 2rem 0;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+blockquote cite {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--text-light);
+    font-style: normal;
 }
 
 /* Leadership Team */
 .leadership-team {
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
     background: var(--light-bg);
 }
 
 .leadership-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 4rem;
     margin-top: 3rem;
-}
-
-.leader-card {
-    background: var(--white);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
 }
 
 .leader-card:hover {
@@ -76,7 +138,8 @@ blockquote {
 }
 
 .leader-info {
-    padding: 2rem;
+    padding: 1.5rem;
+    flex: 1;
 }
 
 .leader-info h3 {
@@ -95,10 +158,42 @@ blockquote {
 }
 
 .leader-image {
-    width: 300px;
-    min-width: 300px;
     position: relative;
     overflow: hidden;
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.linkedin-link {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.linkedin-icon {
+    width: 30px;
+    height: 30px;
+    fill: var(--primary-blue);
+}
+.linkedin-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.leader-role {
+    display: inline;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent-coral);
+    margin-bottom: 0.5rem;
 }
 
 .leader-image img {
@@ -108,10 +203,6 @@ blockquote {
     transition: transform 0.3s ease;
 }
 
-.leader-info {
-    padding: 2.5rem;
-    flex: 1;
-}
 
 .leader-info h3 {
     font-size: 1.75rem;
