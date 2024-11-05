@@ -1,16 +1,69 @@
 /* careers.css */
-
+:root {
+    --primary-blue: #2B3A67;
+    --secondary-blue: #496A81;
+    --accent-coral: #FF6B6B;
+    --bg-light: #f8f9ff;
+    --text-dark: #2B3A67;
+    --text-light: #666;
+}
 /* Careers Hero */
 .careers-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    padding: 8rem 2rem 4rem;
-    color: var(--white);
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+    padding: 120px 0 80px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
-
+.hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(43, 58, 103, 0.1);
+    border-radius: 20px;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.hero-content-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the left */
+    text-align: left;
+}
+.hero-content-right {
+    padding-right: 2rem;
+    max-width: 500px;
+    padding-top: 6rem; /* Adds space to align with the title */
+}
+.gradient-highlight {
+    position: relative;
+    display: inline-block;
+}
+.gradient-highlight::before {
+    content: "";
+    position: absolute;
+    left: -0.25em;
+    right: -0.25em;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(120deg,
+    rgba(255, 107, 107, 0.2) 0%,
+    rgba(255, 142, 142, 0.2) 100%);
+    border-radius: 0.25em;
+    z-index: -1;
+    transform: rotate(-2deg);
+}
 .careers-hero h1 {
     font-size: 3.5rem;
-    margin-bottom: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
 .careers-hero p {
@@ -18,6 +71,13 @@
     opacity: 0.9;
     max-width: 600px;
     margin: 0 auto 2rem;
+}
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* Mission Section */
@@ -30,13 +90,14 @@
 .mission-section p {
     max-width: 800px;
     margin: 0 auto;
+    padding-top: 1rem;
     font-size: 1.25rem;
     line-height: 1.6;
 }
 
 /* Departments Section */
 .departments-section {
-    padding: 6rem 2rem;
+    padding: 4rem 2rem;
     background: var(--light-bg);
 }
 
@@ -44,7 +105,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .department-card {
@@ -138,7 +199,9 @@
     .careers-hero h1 {
         font-size: 2.5rem;
     }
-
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
     .benefits-grid {
         grid-template-columns: 1fr;
     }
