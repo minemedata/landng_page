@@ -92,22 +92,7 @@ body::before {
 }
 
 /* Update footer with seamless transition */
-.footer {
-    position: relative;
-    z-index: 1;
-    background: #050a2f;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    margin-top: -30px;
-    padding-top: 60px;
-}
 
-/* Ensure footer-bottom maintains styling */
-.footer-bottom {
-    background: #050a2f;
-    position: relative;
-    z-index: 2;
-}
 
 /* Add smooth transitions */
 .contact-form-wrapper, .contact-card, .global-cta, .footer {
