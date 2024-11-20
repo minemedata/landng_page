@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="nav-container">
                 <div class="nav-left">
                     <a href="index.html" class="logo-container">
-                        <img src="images/mineme_logo.png" alt="MineMe Logo" class="logo">
+                        <img src="images/MInemeBlueMnowhite.png" alt="MineMe Logo" class="logo">
                         <span>MineMe</span>
                     </a>
                     <div class="nav-links">
