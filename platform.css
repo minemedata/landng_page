@@ -98,12 +98,13 @@ h1 {
     margin-bottom: 1.5rem;
     color: var(--primary-blue);
 }
+
 .gradient-text {
-    background: linear-gradient(120deg, #2B3A67, #FF6B6B);
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: relative;
-    display: inline-block;
+    color: transparent;
 }
 
 .gradient-highlight {
