@@ -19,7 +19,7 @@
 }
 
 body {
-    font-family: ''Inter', -apple-system, BlinkMacSystemFont, sans-serif';
+    font-family: system-ui, -apple-system, sans-serif;
     background-color: #f7f9fc;
     color: #2B3A67;
     line-height: 1.6;
@@ -58,6 +58,8 @@ body {
     display: flex;
     align-items: center;
     gap: 4rem; /* Increased gap */
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .logo-container {
@@ -96,8 +98,8 @@ body {
 .nav-links a {
     color: rgba(255, 255, 255, 0.85); /* Slightly dimmed */
     text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
+    font-weight: 480;
+    font-size: 1.05rem;
     transition: all 0.2s ease;
     padding: 0.5rem 0.75rem;
     border-radius: 6px;

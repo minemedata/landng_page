@@ -421,7 +421,6 @@ body::after {
     padding: 3rem;
     border-radius: 16px;
     text-align: center;
-
     margin-bottom: 4rem;
     border: 1px solid rgba(43, 58, 103, 0.1);
 }
@@ -1058,7 +1057,7 @@ body::after {
         rgba(157, 127, 234, 0.8) 30%,
         rgba(127, 181, 234, 0.8) 70%,
         rgba(255, 107, 107, 0.8) 100%);
-    border-radius: 0.15em;
+    border-radius: 16px;
     z-index: -1;
     opacity: 0;
     transform: scaleX(0);
