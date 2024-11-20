@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h4>Support</h4>
                     <ul>
                         <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="privacy.html">Privacy & Terms</a></li>
-                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="privacy-terms.html">Privacy & Terms</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
                        <!-- <li><a href="status.html">System Status</a></li> -->
                     </ul>
                 </div>
