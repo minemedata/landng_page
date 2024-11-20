@@ -47,19 +47,19 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="footer-bottom">
                 <div class="social-icons">
                     <a href="mailto:contact@mineme.com">
-                        <img src="Images/mailicon.svg" alt="Email" class="social-icon">
+                        <img src="images/mailicon.svg" alt="Email" class="social-icon">
                     </a>
                     <a href="https://linkedin.com/company/mineme" target="_blank">
-                        <img src="Images/linkedinicon.svg" alt="LinkedIn" class="social-icon">
+                        <img src="images/linkedinicon.svg" alt="LinkedIn" class="social-icon">
                     </a>
                     <a href="https://x.com/mineme" target="_blank">
-                        <img src="Images/xicon.svg" alt="X" class="social-icon">
+                        <img src="images/xicon.svg" alt="X" class="social-icon">
                     </a>
                     <a href="https://instagram.com/mineme" target="_blank">
-                        <img src="Images/instaicon.svg" alt="Instagram" class="social-icon">
+                        <img src="images/instaicon.svg" alt="Instagram" class="social-icon">
                     </a>
                     <a href="https://tiktok.com/@mineme" target="_blank">
-                        <img src="Images/youtubeicon.svg" alt="Youtube" class="social-icon">
+                        <img src="images/youtubeicon.svg" alt="Youtube" class="social-icon">
                     </a>
                 </div>
                 <p class="copyright">© 2024 MineMe. All rights reserved.</p>
