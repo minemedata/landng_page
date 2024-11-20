@@ -7,9 +7,7 @@
     --text-dark: #2B3A67;
     --text-light: #666;
 }
-body {
-  font-family: 'montserrat';
-}
+
 /* Careers Hero */
 .careers-hero {
     background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
