@@ -1,164 +1,140 @@
-// main.js
+document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.feature-card');
+    const scrollSection = document.querySelector('.scrolling-features');
+    const navbar = document.querySelector('.navbar');
+    if (!cards.length || !scrollSection) return;
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Navbar functionality
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const dropdowns = document.querySelectorAll('.dropdown');
+    // Calculate the scroll breakpoints for each card
+    const cardCount = cards.length;
+    const scrollBreakpoints = [];
+    const sectionHeight = scrollSection.offsetHeight - window.innerHeight;
+    const breakpointInterval = sectionHeight / (cardCount + 1);
+    for (let i = 0; i <= cardCount; i++) {
+        scrollBreakpoints.push(breakpointInterval * i);
+    }
 
-    // Mobile menu toggle
-    mobileMenuToggle?.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
-    // Mobile dropdown toggle
-    dropdowns.forEach(dropdown => {
-        const toggle = dropdown.querySelector('.dropdown-toggle');
-        toggle?.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                dropdown.classList.toggle('active');
+    const updateCards = () => {
+        // Get the scroll position relative to the section
+        const scrollTop = window.scrollY - scrollSection.offsetTop;
+        
+        // Update each card based on its position in the scroll
+        cards.forEach((card, index) => {
+            const cardStart = scrollBreakpoints[index];
+            const cardEnd = scrollBreakpoints[index + 1];
+            
+            if (scrollTop >= cardStart && scrollTop < cardEnd) {
+                // Card is active
+                card.classList.add('active');
+                card.classList.remove('previous', 'next');
+            } else if (scrollTop >= cardEnd) {
+                // Card has been scrolled past
+                card.classList.add('previous');
+                card.classList.remove('active', 'next');
+            } else {
+                // Card hasn't appeared yet
+                card.classList.add('next');
+                card.classList.remove('active', 'previous');
             }
         });
-    });
+    };
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navLinks?.contains(e.target) && !mobileMenuToggle?.contains(e.target)) {
-            navLinks?.classList.remove('active');
-            dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+    // Throttle scroll events for better performance
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                updateCards();
+                ticking = false;
+            });
+            ticking = true;
         }
     });
 
-    // Pricing page specific functionality
-    if (window.location.pathname.includes('pricing.html')) {
-        // Billing toggle functionality
-        const billingToggle = document.getElementById('billing-toggle');
-        const priceElements = document.querySelectorAll('.amount');
-        const originalPrices = Array.from(priceElements).map(el => parseInt(el.textContent.replace('$', '')));
+    // Initial update
+    updateCards();
 
-        billingToggle?.addEventListener('change', function() {
-            priceElements.forEach((el, index) => {
-                const originalPrice = originalPrices[index];
-                if (this.checked) {
-                    // Annual pricing (20% discount)
-                    el.textContent = `$${Math.round(originalPrice * 0.8)}`;
-                } else {
-                    // Monthly pricing
-                    el.textContent = `$${originalPrice}`;
-                }
-            });
-        });
-    }
-
-    // Platform page specific functionality
-    if (window.location.pathname.includes('platform.html')) {
-        // Tab switching functionality
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const previewContents = document.querySelectorAll('.preview-content');
-
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const tab = button.dataset.tab;
-
-                // Update active states
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                previewContents.forEach(content => content.classList.remove('active'));
-
-                // Show selected content
-                button.classList.add('active');
-                document.querySelector(`#${tab}`).classList.add('active');
-            });
-        });
-    }
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+    // Intersection Observer for accent text animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                // Reset animation when element leaves viewport
+                entry.target.classList.remove('visible');
             }
         });
+    }, {
+        threshold: 0.3,
+        rootMargin: '0px'
     });
 
-    // Add scroll-based navbar styling
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
+    // Observe all accent-text elements
+
+    // Function to handle navbar background change on scroll
+    const handleNavbarBackground = () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-    });
-});
-// Add this at the beginning of main.js
-document.addEventListener('DOMContentLoaded', function() {
-    // Load navbar
-    const navbarPlaceholder = document.getElementById('navbar-placeholder');
-    if (navbarPlaceholder) {
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                navbarPlaceholder.innerHTML = data;
-                // After loading navbar, initialize its functionality
-                initializeNavbar();
-            })
-            .catch(error => console.error('Error loading navbar:', error));
+    };
+
+    // Listen for scroll events
+    window.addEventListener('scroll', handleNavbarBackground);
+
+    // Initial check in case the page is already scrolled on load
+    handleNavbarBackground();
+
+    const phrases = [
+        'personalize every touchpoint',
+        'build lifetime loyalty',
+        'prevent silent churn'
+    ];
+    
+    const typewriter = document.querySelector('.typewriter');
+    let phraseIndex = 0;
+    
+    async function typePhrase(phrase) {
+        for (let i = 0; i < phrase.length; i++) {
+            typewriter.textContent += phrase.charAt(i);
+            await new Promise(resolve => setTimeout(resolve, 100)); // Adjust typing speed here
+        }
     }
+    
+    async function deletePhrase() {
+        const phrase = typewriter.textContent;
+        for (let i = phrase.length; i > 0; i--) {
+            typewriter.textContent = phrase.substring(0, i - 1);
+            await new Promise(resolve => setTimeout(resolve, 50)); // Adjust deletion speed here
+        }
+    }
+    
+    async function typewriterEffect() {
+        while (true) {
+            await typePhrase(phrases[phraseIndex]);
+            await new Promise(resolve => setTimeout(resolve, 2000)); // Pause at the end of phrase
+            await deletePhrase();
+            await new Promise(resolve => setTimeout(resolve, 500)); // Pause between phrases
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+        }
+    }
+    
+    typewriterEffect();
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+            
+            // Highlight current page in navigation
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+
 });
 
-// Separate function for navbar initialization
-function initializeNavbar() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const dropdowns = document.querySelectorAll('.dropdown');
-
-    // Mobile menu toggle
-    mobileMenuToggle?.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
-    // Mobile dropdown toggle
-    dropdowns.forEach(dropdown => {
-        const toggle = dropdown.querySelector('.dropdown-toggle');
-        toggle?.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                dropdown.classList.toggle('active');
-            }
-        });
-    });
-
-    (function (C, A, L) {
-        let p = function (a, ar) {
-            a.q.push(ar);
-        };
-        let d = C.document;
-        C.Cal = C.Cal || function () {
-            let cal = C.Cal;
-            let ar = arguments;
-            if (!cal.loaded) {
-                cal.ns = {};
-                cal.q = cal.q || [];
-                d.head.appendChild(d.createElement("script")).src = A;
-                cal.loaded = true;
-            }
-            if (ar[0] === L) {
-                const api = function () {
-                    p(api, arguments);
-                };
-                const namespace = ar[1];
-                api.q = api.q || [];
-                typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar);
-                return;
-            }
-            p(cal, ar);
-        };
-    })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", {origin: "https://cal.com"});
-}

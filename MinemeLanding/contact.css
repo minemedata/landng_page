@@ -7,14 +7,123 @@
     --background-light: #f8f9fc;
     --text-primary: #2c3e50;
     --text-secondary: #64748b;
+    --orange-gradient: #FFB347;
 }
 
-/* Contact Hero */
-.contact-hero {
-    background: linear-gradient(135deg, #f8f9ff 15%, #adcaff 75%);
-    padding: 120px 0 80px;
-    color: var(--primary-color);
+/* Simplified body background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    background: #f8f9ff; /* Fallback */
 }
+
+/* Single unified gradient background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        #f8f9ff 0%,
+        #adcaff 60%,
+        rgba(255, 107, 107, 0.3) 100%
+    );
+    z-index: -2;
+}
+
+/* Simplified contact-hero with subtle overlay */
+.contact-hero {
+    position: relative;
+    padding: 150px 0 100px;
+    overflow: hidden;
+    z-index: 1;
+    background: transparent;
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    z-index: -1;
+    background: radial-gradient(circle at 30% 50%, rgba(255, 179, 71, 0.1) 0%, transparent 70%),
+                radial-gradient(circle at 70% 50%, rgba(255, 107, 107, 0.1) 0%, transparent 70%);
+    filter: blur(30px);
+}
+
+/* Simplified contact section without its own background */
+.contact-section {
+    position: relative;
+    background: transparent;
+    z-index: 1;
+    padding: 80px 0;
+}
+
+/* Remove contact-section::before gradient */
+.contact-section::before {
+    display: none;
+}
+
+/* Update form and card backgrounds with increased transparency */
+.contact-form-wrapper, .contact-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Simplified global-cta */
+.global-cta {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    padding: 80px 0;
+}
+
+/* Remove global-cta::before background */
+.global-cta::before {
+    display: none;
+}
+
+/* Update footer with seamless transition */
+.footer {
+    position: relative;
+    z-index: 1;
+    background: #050a2f;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    margin-top: -30px;
+    padding-top: 60px;
+}
+
+/* Ensure footer-bottom maintains styling */
+.footer-bottom {
+    background: #050a2f;
+    position: relative;
+    z-index: 2;
+}
+
+/* Add smooth transitions */
+.contact-form-wrapper, .contact-card, .global-cta, .footer {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Optional: Add subtle animation to gradients */
+@keyframes gradientFlow {
+    0% {
+        transform: scale(1.2) rotate(0deg);
+    }
+    100% {
+        transform: scale(1.2) rotate(360deg);
+    }
+}
+
 .hero-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -61,11 +170,13 @@
 .highlight {
     background: linear-gradient(120deg, var(--accent-coral), #FF8E8E);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .gradient-text {
     background: linear-gradient(120deg, var(--accent-color), #FF8E8E);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
 }
@@ -81,7 +192,20 @@
 /* Contact Section */
 .contact-section {
     padding: 80px 0;
-    background: var(--background-light);
+    background: linear-gradient(135deg, #f8f9ff 0%, #e0e9ff 50%, #adcaff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 100% 0%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(43, 58, 103, 0.1) 0%, transparent 50%);
+    top: 0;
+    left: 0;
 }
 
 .contact-container {
@@ -95,10 +219,18 @@
 
 /* Contact Form */
 .contact-form-wrapper {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     padding: 40px;
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(43, 58, 103, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-wrapper:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(43, 58, 103, 0.15);
 }
 
 .contact-form-wrapper h2 {
@@ -162,7 +294,7 @@ input:focus, textarea:focus {
 .submit-btn {
     width: 100%;
     padding: 16px;
-    background: var(--accent-color);
+    background: linear-gradient(135deg, var(--accent-color) 0%, #FF8E8E 100%);
     color: white;
     border: none;
     border-radius: 8px;
@@ -173,8 +305,9 @@ input:focus, textarea:focus {
 }
 
 .submit-btn:hover {
+    background: linear-gradient(135deg, #FF8E8E 0%, var(--accent-color) 100%);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255,107,107,0.3);
+    box-shadow: 0 4px 15px rgba(255,107,107,0.4);
 }
 
 /* Contact Info */
@@ -278,11 +411,20 @@ input:focus, textarea:focus {
     color: var(--accent-coral);
 }
 .contact-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     padding: 32px;
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(43, 58, 103, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.contact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(43, 58, 103, 0.15);
+}
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {

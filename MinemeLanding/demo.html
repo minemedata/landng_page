@@ -6,7 +6,7 @@
   <title>MineMe | Schedule a Demo</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="demo.css">
-  <link rel="icon" href="Images/mineme_logo.png">
+  <link rel="icon" href="images/mineme_logo.png">
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       fetch('navbar.html')
@@ -25,63 +25,70 @@
               });
     });
   </script>
-  <script type="text/javascript">
+  <script>
     (function (C, A, L) {
       let p = function (a, ar) {
         a.q.push(ar);
       };
       let d = C.document;
-      C.Cal = C.Cal || function () {
-        let cal = C.Cal;
-        let ar = arguments;
-        if (!cal.loaded) {
-          cal.ns = {};
-          cal.q = cal.q || [];
-          d.head.appendChild(d.createElement("script")).src = A;
-          cal.loaded = true;
-        }
-        if (ar[0] === L) {
-          const api = function () {
-            p(api, arguments);
-          };
-          const namespace = ar[1];
-          api.q = api.q || [];
-          typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar);
-          return;
-        }
-        p(cal, ar);
-      };
+      C.Cal =
+        C.Cal ||
+        function () {
+          let cal = C.Cal;
+          let ar = arguments;
+          if (!cal.loaded) {
+            cal.ns = {};
+            cal.q = cal.q || [];
+            d.head.appendChild(d.createElement("script")).src = A;
+            cal.loaded = true;
+          }
+          if (ar[0] === L) {
+            const api = function () {
+              p(api, arguments);
+            };
+            const namespace = ar[1];
+            api.q = api.q || [];
+            typeof namespace === "string"
+              ? (cal.ns[namespace] = api) && p(api, ar)
+              : p(cal, ar);
+            return;
+          }
+          p(cal, ar);
+        };
     })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", {origin: "https://cal.com"});
-  </script>
-  <script>
-    Cal("preload", {
-      calLink: "archanas/mineme-demo-scheduling"
+    Cal("init", { origin: "https://app.cal.com" });
+
+    // Add UI configuration
+    Cal("ui", {
+      styles: { branding: { brandColor: "#2B3A67" } },
+      hideEventTypeDetails: false,
     });
+
+    // Preload your calendar
+    Cal("preload", { calLink: "archanas/mineme-demo" });
   </script>
 </head>
 <body>
 
-
-<div id="navbar-placeholder"></div>
+<header class="header-transparent">
+  <div class="nav-left">
+    <a href="index.html" class="logo-container">
+      <img src="images/MInemeBlueMnowhite.png" alt="MineMe Logo" class="logo">
+      <span class="company-name">MineMe</span>
+    </a>
+  </div>
+  <div class="demo-badge">Request Demo</div>
+</header>
+<br>
 
 <!-- Demo Hero Section -->
 <section class="demo-hero">
-  <div class="demo-background">
-  </div>
   <div class="hero-container">
-    <h1>See &nbsp;<span class="gradient-highlight">  MineMe  </span>&nbsp; in Action</h1>
-    <p>Join us for a personalized walkthrough of how MineMe can transform your customer relationships</p>
-  </div>
-  <br>
-  <br>
-
-  <div class="scheduling-container">
-    <div class="scheduling-content">
+    <div class="hero-left">
+      <h1>See &nbsp;<span class="gradient-highlight">MineMe</span>&nbsp; in Action</h1>
       <div class="scheduling-info">
         <h2>Book Your Demo</h2>
         <p class="info-subtitle">Learn how MineMe can help your business:</p>
-
         <div class="demo-features">
           <div class="feature-item">
             <div class="feature-icon">
@@ -120,36 +127,19 @@
             </div>
           </div>
         </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            "Some Testimonial: The demo helped us understand exactly how MineMe could transform our customer relationships."
-          </div>
-          <div class="testimonial-author">
-            <img src="avatar.jpg" alt="Customer" class="author-avatar">
-            <div class="author-info">
-              <span class="author-name">Sarah Johnson</span>
-              <span class="author-position">Head of CX at TechCorp</span>
-            </div>
-          </div>
-        </div>
       </div>
-
-      <!-- Cal.com Embed -->
+    </div>
+    <div class="hero-right">
       <div id="my-cal-inline"></div>
-      <script src="https://cal.com/embed.js"></script>
       <script>
         Cal("inline", {
           elementOrSelector: "#my-cal-inline",
-          calLink: "archanas/mineme-demo-scheduling"
+          calLink: "archanas/mineme-demo"
         });
       </script>
     </div>
   </div>
 </section>
-
-
-
 
 <!-- Global CTA -->
 
@@ -158,67 +148,34 @@
 <!-- Footer goes here -->
 <footer class="footer">
   <div class="footer-content">
-    <div class="footer-section">
-      <h4>MineMe</h4>
-      <ul>
-        <li><a href="platform.html">Platform Overview</a></li>
-        <li><a href="solutions.html">Solutions</a></li>
-        <li><a href="cases.html">Use Cases</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h4>Platform</h4>
-      <ul>
-        <li><a href="platform.html">Overview</a></li>
-        <li><a href="automation.html">Integration</a></li>
-        <li><a href="enterprise.html">Enterprise</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="updates.html">Platform Updates</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h4>Support</h4>
-      <ul>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="privacy.html">Privacy & Terms</a></li>
-        <li><a href="cookies.html">Cookie Policy</a></li>
-        <li><a href="status.html">System Status</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="team.html">Our Team</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="careers.html">Careers</a></li>
-      </ul>
+    <div class="footer-links">
+      <a href="platform.html">Platform Overview</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact Us</a>
     </div>
   </div>
 
   <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      <img src="images/minemeM.png" alt="MineMe Logo">
+      <span class="copyright">© 2024 MineMe. All rights reserved.</span>
+    </div>
     <div class="social-icons">
-      <a href="mailto:contact@mineme.com">
-        <img src="Images/mailicon.svg" alt="Email" class="social-icon">
+      <a href="mailto:info@minemedata.com">
+        <img src="images/mailicon.svg" alt="Email" class="social-icon">
       </a>
       <a href="https://linkedin.com/company/mineme" target="_blank">
-        <img src="Images/linkedinicon.svg" alt="LinkedIn" class="social-icon">
+        <img src="images/linkedinicon.svg" alt="LinkedIn" class="social-icon">
       </a>
-      <a href="https://x.com/mineme" target="_blank">
-        <img src="Images/xicon.svg" alt="X" class="social-icon">
+      <a href="https://x.com/minemedata" target="_blank">
+        <img src="images/xicon.svg" alt="X" class="social-icon">
       </a>
-      <a href="https://instagram.com/mineme" target="_blank">
-        <img src="Images/instaicon.svg" alt="Instagram" class="social-icon">
-      </a>
-      <a href="https://tiktok.com/@mineme" target="_blank">
-        <img src="Images/youtubeicon.svg" alt="Youtube" class="social-icon">
+      <a href="https://instagram.com/mineme_data" target="_blank">
+        <img src="images/instaicon.svg" alt="Instagram" class="social-icon">
       </a>
     </div>
-    <p class="copyright">© 2024 MineMe. All rights reserved.</p>
   </div>
 </footer>
 <script src="main.js"></script>

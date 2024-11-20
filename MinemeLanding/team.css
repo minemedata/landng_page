@@ -9,9 +9,10 @@
 }
 /* Team Hero */
 .team-hero {
-    background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+    position: relative;
     padding: 120px 0 80px;
-    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(43, 58, 103, 0.1), rgba(255, 107, 107, 0.1));
 }
 .hero-container {
     max-width: 1400px;
@@ -20,46 +21,100 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: start; /* Changed from center to start */
+    align-items: start;
 }
 .hero-content-left {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns items to the left */
+    align-items: flex-start;
     text-align: left;
 }
 .hero-content-right {
     padding-right: 2rem;
     max-width: 500px;
-    padding-top: 6rem; /* Adds space to align with the title */
+    padding-top: 6rem;
 }
 .team-hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    color: var(--primary-blue);
 }
-
-
-.team-hero p {
+.hero-subtitle {
     font-size: 1.25rem;
     opacity: 0.9;
     max-width: 600px;
     margin: 0 auto;
 }
-.hero-badge {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: rgba(43, 58, 103, 0.1);
-    border-radius: 20px;
-    color: var(--primary-blue);
-    font-weight: 600;
-    font-size: 0.875rem;
-    margin-bottom: 1.5rem;
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 4rem 2rem;
+    background: var(--bg-light);
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
-.gradient-highlight {
-    position: relative;
-    display: inline-block;
+.testimonials-section h2 {
+    color: var(--primary-blue);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.quote-container {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.testimonial {
+    background: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid var(--accent-coral);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+.testimonial p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin: 0;
+}
+.testimonial cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--text-light);
+}
+.testimonials-description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-top: 2rem;
+    color: var(--text-dark);
 }
 
+/* Mission Section */
+.mission-section {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+.mission-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.mission-content h2 {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.mission-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
 
 /* Founder Story */
 .founder-story {
@@ -87,8 +142,19 @@
     margin-bottom: 2rem;
 }
 .mission-section {
-    padding: 30px 0;
-    background: white;
+    position: relative;
+    padding: 80px 0;
+    background: transparent;
+}
+
+.mission-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 0% 50%, rgba(127, 181, 234, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 100% 50%, rgba(157, 127, 234, 0.1) 0%, transparent 50%);
+    z-index: -1;
 }
 
 .mission-content {
@@ -100,8 +166,11 @@
 .quote-container {
     margin: 60px 0;
     padding: 40px;
-    background: var(--bg-light);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
     border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
 }
 
 blockquote {
@@ -135,6 +204,7 @@ blockquote cite {
 
 .leader-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 48px rgba(31, 38, 135, 0.15);
 }
 
 .leader-info {
@@ -150,11 +220,12 @@ blockquote cite {
 
 .leader-card {
     display: flex;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+    transition: all 0.3s ease;
 }
 
 .leader-image {
@@ -212,12 +283,14 @@ blockquote cite {
 
 .position {
     display: inline-block;
-    background: var(--light-bg);
+    background: linear-gradient(135deg, rgba(127, 181, 234, 0.2), rgba(157, 127, 234, 0.2));
     color: var(--primary-color);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-weight: 600;
     margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
 }
 
 .experience {
@@ -248,8 +321,19 @@ blockquote cite {
 
 /* Values Section */
 .values-section {
-    padding: 6rem 2rem;
-    background: var(--white);
+    position: relative;
+    padding: 100px 0;
+    background: transparent;
+}
+
+.values-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(127, 181, 234, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(157, 127, 234, 0.1) 0%, transparent 50%);
+    z-index: -1;
 }
 
 .values-grid {
@@ -261,20 +345,25 @@ blockquote cite {
 
 .value-card {
     padding: 2rem;
-    background: var(--light-bg);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
     border-radius: 12px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
 }
 
 .value-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 48px rgba(31, 38, 135, 0.15);
 }
 
 .value-card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -312,6 +401,42 @@ blockquote cite {
 
     blockquote {
         font-size: 1.25rem;
+    }
+}
+
+/* Add subtle grain texture overlay */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Add floating gradient background */
+.team-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(127, 181, 234, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(157, 127, 234, 0.15) 0%, transparent 50%);
+    animation: gradientFloat 20s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+/* Add gradient animation */
+@keyframes gradientFloat {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(-1%, 1%) scale(1.02);
+    }
+    100% {
+        transform: translate(1%, -1%) scale(0.98);
     }
 }
 
