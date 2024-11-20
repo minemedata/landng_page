@@ -478,3 +478,38 @@ input:focus, textarea:focus {
         font-size: 1.125rem;
     }
 }
+
+.tabs-container {
+    transform: scale(0.9); /* Scales down the entire tabs section to 90% */
+    transform-origin: top center; /* Keeps the scaling centered from the top */
+    margin: 0 auto;
+    max-width: 1400px; /* Increased max-width to accommodate tabs */
+    padding: 0 20px;
+}
+
+.tab-content {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start; /* Aligns items to top */
+}
+
+.tab {
+    flex: 1;
+    max-width: 600px; /* Adjust based on your needs */
+    min-width: 300px; /* Ensures tabs don't get too small */
+}
+
+/* Make form elements more compact */
+.form-group {
+    margin-bottom: 15px; /* Reduced from whatever it was before */
+}
+
+input, textarea {
+    padding: 8px 12px; /* Slightly reduced padding */
+}
+
+/* Adjust spacing between elements */
+.contact-form, .mailing-list-form {
+    padding: 20px; /* Reduced padding */
+}
