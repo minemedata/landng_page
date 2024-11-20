@@ -369,6 +369,7 @@ body {
     align-items: center;
 }
 
+
 .footer-bottom-left {
     display: flex;
     align-items: center;
@@ -376,7 +377,7 @@ body {
 }
 
 .footer-bottom-left img {
-    height: 80px;
+    height: 60px;
     width: auto;
 }
 
