@@ -191,125 +191,139 @@ blockquote cite {
 
 /* Leadership Team */
 .leadership-team {
-    padding: 6rem 2rem;
-    background: var(--bg-light);
+    padding: 4rem 2rem;
+    padding-top: calc(80px + 3rem);
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.leadership-team h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
 }
 
 .leadership-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    margin-top: 2rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center;
 }
 
-.leader-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 48px rgba(31, 38, 135, 0.15);
+.leader-card {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leader-image {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+.leader-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.linkedin-link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkedin-icon {
+    width: 24px;
+    height: 24px;
+    fill: #0077b5;
 }
 
 .leader-info {
-    padding: 1.75rem;
-    flex: 1;
+    padding: 1.5rem;
 }
 
 .leader-info h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: var(--primary-blue);
-    font-weight: 600;
 }
-
-.leader-card {
-    display: flex;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.08);
-    transition: all 0.3s ease;
-    max-height: 400px;
-}
-
-.leader-image {
-    position: relative;
-    width: 50%;
-    min-height: 100%;
-}
-.linkedin-link {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-.linkedin-icon {
-    width: 30px;
-    height: 30px;
-    fill: var(--primary-blue);
-}
-.linkedin-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-.leader-role {
-    display: inline;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--accent-coral);
-    margin-bottom: 0.5rem;
-}
-
-.leader-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
 
 .position {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
-}
-
-.experience {
-    margin-top: 1.5rem;
+    display: block;
+    color: #666;
+    margin-bottom: 1rem;
 }
 
 .experience ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 1rem;
+    padding-left: 1.2rem;
+    margin: 0;
 }
 
 .experience li {
-    margin-bottom: 0.75rem;
-    padding-left: 1.5rem;
-    position: relative;
-    color: black;
-    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
     line-height: 1.4;
-    font-family: 'Inter', sans-serif;
 }
 
-.experience li::before {
-    content: "→";
-    color: var(--accent-coral);
-    position: absolute;
-    left: 0;
-    font-weight: normal;
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .leadership-team {
+        padding: 3rem 1rem;
+        padding-top: calc(60px + 2rem);
+    }
+
+    .leadership-team h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .leadership-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .leader-card {
+        max-width: 100%;
+    }
+
+    .leader-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .experience li {
+        font-size: 0.95rem;
+    }
 }
 
+/* Small phones */
+@media screen and (max-width: 480px) {
+    .leadership-team {
+        padding: 2rem 1rem;
+    }
+
+    .leadership-team h2 {
+        font-size: 1.75rem;
+    }
+
+    .leader-info {
+        padding: 1rem;
+    }
+}
 
 /* Values Section */
 .values-section {
@@ -633,4 +647,292 @@ body::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
   pointer-events: none;
   opacity: 0.4;
+}
+
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  padding-top: 80px;
+}
+
+section {
+  padding: 5rem 2rem;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Leadership Team Section */
+.leadership-team {
+  background: #f8f9fa;
+  margin-top: 2rem;
+  padding-top: 3rem;
+}
+
+.leadership-team h2,
+.funders-section h2,
+.testimonials-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.leader-card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Funders Section */
+.funders-section {
+  background: #fff;
+}
+
+.funders-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.funders-list li {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  background: #f8f9fa;
+}
+
+.quote-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonial cite {
+  color: #666;
+}
+
+/* Vision Quotes */
+.vision-quotes {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.vision-quote {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vision-quote p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Global CTA */
+.global-cta {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.primary-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  section {
+    padding: 4rem 2rem;
+  }
+  
+  .leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 3rem 1.5rem;
+  }
+
+  .leadership-team h2,
+  .funders-section h2,
+  .testimonials-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-container {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial p {
+    font-size: 1.1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primary-btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .leadership-team h2,
+  .funders-section h2,
+  .testimonials-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .funders-list {
+    grid-template-columns: 1fr;
+  }
+
+  .vision-quote {
+    padding: 1.5rem;
+  }
+
+  .vision-quote p {
+    font-size: 1rem;
+  }
+
+  .testimonial {
+    padding: 1.5rem;
+  }
+
+  .leader-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .experience li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* If you're using a fixed navbar, also ensure it has these properties */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+}
+
+/* If you want a smoother solution, you can also use a scroll-margin-top */
+.leadership-team {
+  scroll-margin-top: 80px; /* Adjust to match your navbar height */
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+
+  .leadership-team {
+    margin-top: 1rem;
+    padding-top: 2rem;
+  }
 }

@@ -1306,3 +1306,92 @@ body::after {
         height: 30px;  /* Smaller on mobile */
     }
 }
+
+.global-cta {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-container h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .global-cta {
+    padding: 3rem 1rem;
+  }
+
+  .cta-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .primary-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-header h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-header h3 {
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-header h3 {
+    font-size: 1.1rem;
+  }
+}
