@@ -489,66 +489,148 @@ body::after {
   }
 
 .vision-section {
-  padding: 4rem 2rem;
-  background-color: #fff;
+  padding: 8rem 2rem;
+  background: linear-gradient(135deg, rgba(43, 58, 103, 0.03), rgba(255, 107, 107, 0.03));
+  position: relative;
+  overflow: hidden;
 }
 
-.vision-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
+.vision-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 4rem;
+  position: relative;
 }
 
-.vision-card {
-  padding: 2rem;
-  border-left: 3px solid var(--primary-blue);
-  background: #fff;
+.vision-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--accent-coral);
+  border-radius: 2px;
+}
+
+.vision-quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.vision-quote {
+  position: relative;
+  padding: 2rem 3rem;
   transition: transform 0.3s ease;
 }
 
-.vision-card:hover {
-  transform: translateY(-5px);
+.vision-quote blockquote {
+  margin: 0;
+  position: relative;
+  z-index: 2;
 }
 
-.vision-card h3 {
-  color: var(--primary-blue);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.vision-card p {
+.vision-quote p {
+  font-size: 1.25rem;
+  line-height: 1.8;
   color: var(--text-dark);
-  line-height: 1.6;
-  font-size: 1.05rem;
+  margin: 0;
 }
 
-/* Make the last two cards centered in the last row */
-.vision-grid > div:nth-last-child(-n+2) {
-  grid-column: span 1;
+.vision-quote::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -1rem;
+  font-size: 4rem;
+  color: var(--primary-blue);
+  opacity: 0.2;
+  font-family: Georgia, serif;
 }
 
-.vision-grid > div:nth-last-child(-n+2):first-child {
-  grid-column: 2;
+/* Styling variations */
+.vision-quote.highlight {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-left: 2rem;
 }
+
+.vision-quote.emphasis {
+  background: linear-gradient(135deg, rgba(43, 58, 103, 0.08), rgba(255, 107, 107, 0.08));
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+}
+
+.vision-quote.emphasis p {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.vision-quote.emphasis::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add animation delay for sequential fade-in */
+.vision-quote:nth-child(2) { animation-delay: 0.2s; }
+.vision-quote:nth-child(3) { animation-delay: 0.4s; }
+.vision-quote:nth-child(4) { animation-delay: 0.6s; }
+.vision-quote:nth-child(5) { animation-delay: 0.8s; }
+.vision-quote:nth-child(6) { animation-delay: 1s; }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .vision-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+  .vision-section {
+    padding: 4rem 1.5rem;
   }
-  
-  .vision-grid > div:nth-last-child(-n+2) {
-    grid-column: auto;
+
+  .vision-quote {
+    padding: 1.5rem;
+  }
+
+  .vision-quote p {
+    font-size: 1.1rem;
+  }
+
+  .vision-quote.highlight {
+    margin-left: 0;
+  }
+
+  .vision-quote.emphasis p {
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width: 768px) {
-  .vision-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .vision-card {
-    padding: 1.5rem;
-  }
+/* Add subtle grain texture overlay */
+.vision-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
 }
