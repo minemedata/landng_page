@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial update
     updateCards();
 
-    // Intersection Observer for accent text animations
+    // Enhanced Intersection Observer for accent text animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -64,11 +64,14 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }, {
-        threshold: 0.3,
-        rootMargin: '0px'
+        threshold: 0.5, // Trigger when 50% of the element is visible
+        rootMargin: '-50px' // Small offset to ensure better trigger timing
     });
 
     // Observe all accent-text elements
+    document.querySelectorAll('.accent-text').forEach(element => {
+        observer.observe(element);
+    });
 
     // Function to handle navbar background change on scroll
     const handleNavbarBackground = () => {

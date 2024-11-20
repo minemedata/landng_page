@@ -1054,21 +1054,21 @@ body::after {
     top: 0;
     bottom: 0;
     background: linear-gradient(120deg,
-        rgba(255, 107, 107, 0.4) 0%,
-        rgba(157, 127, 234, 0.4) 30%,
-        rgba(127, 181, 234, 0.4) 70%,
-        rgba(255, 107, 107, 0.4) 100%);
+        rgba(255, 107, 107, 0.8) 0%,
+        rgba(157, 127, 234, 0.8) 30%,
+        rgba(127, 181, 234, 0.8) 70%,
+        rgba(255, 107, 107, 0.8) 100%);
     border-radius: 0.15em;
     z-index: -1;
     opacity: 0;
-    transform: scaleY(0);
-    transform-origin: bottom;
-    transition: transform 1s ease, opacity 0.8s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s ease, opacity 0.6s ease;
 }
 
 .accent-text.visible::after {
     opacity: 1;
-    transform: scaleY(1);
+    transform: scaleX(1);
 }
 
 /* Feature items styling */
@@ -1176,7 +1176,7 @@ body::after {
 }
 
 .feature-content h3 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: var(--primary-blue);
