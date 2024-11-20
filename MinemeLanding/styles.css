@@ -653,3 +653,7 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(198, 75, 75, 0.2);
 }
+
+#features {
+    scroll-margin-top: 60px; /* Adjust this value based on your navbar height */
+}

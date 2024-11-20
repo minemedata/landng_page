@@ -6,230 +6,221 @@
   <title>MineMe | Data Done Right</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="index.css">
-  <script type="text/javascript" src="main.js"></script>
-  <link rel="icon" href="images/mineme_logo.png">
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('navbar.html')
-              .then(response => response.text())
-              .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-
-                // Highlight current page in navigation
-                const currentPage = window.location.pathname.split('/').pop();
-                const navLinks = document.querySelectorAll('.nav-links a');
-                navLinks.forEach(link => {
-                  if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                  }
-                });
-              });
-    });
-  </script>
+  <link rel="stylesheet" href="navbar.css">
+  <script src="loadNavbar.js"></script>
 </head>
 <body>
-<!-- Navigation Bar -->
-<div id="navbar-placeholder"></div>
-
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-container">
-    <div class="hero-content">
-      <h1>Turn every signal into success with &nbsp;<span class="gradient-highlight"> MineMe.</span></h1>
-      <p class="hero-subtitle">MineMe alerts you to what matters in your customer's world and drives <strong>personalized outreach at scale</strong>. Our AI suggests <strong>next-best-actions</strong> and <strong>contextual messages</strong> that resonate. 
-      <br>
-      <br>
-        No generic templates. No spray-and-pray campaigns. Just <strong>genuine, timely engagement</strong> when it counts most.
-      </p>
-      <div class="hero-cta">
-        <a href="demo.html" class="primary-btn pulse">Schedule A Demo</a>
-      </div>
-    </div>
-
-    <div class="hero-visual">
-      <div class="platform-preview">
-        <img src="images/platform-preview.png" alt="MineMe Platform Interface">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Features Section -->
-<section class="key-features">
-  <div class="section-container">
-    <div class="section-header">
-      <h2><span class="accent-text">Personalization, perfected</span></h2>
-      <h3>It’s time to capture <b>100% of opportunity</b> for <b>100% of your accounts</b></h3>
-    </div>
-    <div class="features-grid">
-      <!-- Feature 1 -->
-      <div class="feature-item">
-        <div class="feature-content">
-
-          <h3>Stop missing <br><span class="accent-text">million-dollar</span>&nbsp; moments</h3>
-          <p class="feature-description">MineMe blends <b>market intelligence</b> with your <b>customer</b> data to identify and prioritize every <b>opportunity to grow</b>.
-              From funding rounds to product launches, get instantly alerted to what matters, when it matters.
-            </p>
-        </div>
-        <div class="feature-visual gradient-swell-1">
-          <img src="images/feature1-visual.png" alt="Feature 1 Visual">
-        </div>
-      </div>
-      <!-- Feature 2 -->
-      <div class="feature-item reverse">
-        <div class="feature-content">
-
-          <h3>The right message, at the right time,<span class="accent-text">every time</span></h3>
-            <p class="feature-description">Transform insights into action. MineMe <b>predicts next-best actions</b>, prioritizing <b>highest value opportunities</b>.
-            <br>
-            <br>
-            Our AI crafts <b>hyper-personalized outreach at critical moments in the customer journey</b> - scaling white glove service to your every account. 
-            </p>
-        </div>
-        <div class="feature-visual gradient-swell-2">
-          <img src="images/feature2-visual.png" alt="Feature 2 Visual">
-        </div>
-      </div>
-      <!-- Feature 3 -->
-      <div class="feature-item">
-        <div class="feature-content">
-  
-          <h3>Focus on &nbsp;<span class="accent-text">strategy,</span><br>not spreadsheets</h3>
-            <p class="feature-description">See your <b>impact in real-time</b>. Track how proactive outreach drives revenue, then replicate <b>winning plays</b> across your portfolio.
-              <br>
-              <br> Watch engagement translate directly into revenue <b>expansion & retention</b>, empowering every member on your team to <b>exceed your goals.</b></p>
-        </div>
-        <div class="feature-visual gradient-swell-3">
-          <img src="images/feature3gif%20(1).gif" alt="Feature 3 Visual">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Platform Benefits -->
-<section class="platform-benefits">
-  <div class="section-container">
-    <div class="benefit-content">
-
-      <h2>One Platform, <span class="gradient-highlight">Endless Possibilities</span></h2>
-      <p class="typewriter-container">
-        MineMe's AI copilot helps your customer engagement teams 
-        <span class="typewriter"></span>
-      </p>
-
-      <div class="benefits-list">
-        <div class="benefit-item">
-          <div class="check-icon">✓</div>
-          <div class="benefit-text">
-            <h4>Real-time Customer Insights</h4>
-            <p>Monitor and analyze customer behavior as it happens</p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>Turn every signal into success with &nbsp;<span class="gradient-highlight"> MineMe.</span></h1>
+          <p class="hero-subtitle"> MineMe <strong>alerts you to what matters</strong> in your customer's world – from expansions to product launches – and helps you reach out with purpose.
+              Our AI algorithm recommends <strong>next-best-actions</strong> and crafts personalized messages, for white glove <strong>outreach at scale.</strong>
+          <br>
+          <br>
+            No generic templates. No spray-and-pray campaigns. Just <strong>genuine, timely engagement</strong> when it counts most.
+          </p>
+          <div class="hero-cta">
+            <a href="demo.html" class="primary-btn pulse">Schedule A Demo</a>
           </div>
         </div>
 
-        <div class="benefit-item">
-          <div class="check-icon">✓</div>
-          <div class="benefit-text">
-            <h4>Automated Content Generation</h4>
-            <p>Create personalized messages at scale with AI assistance</p>
-          </div>
-        </div>
-
-        <div class="benefit-item">
-          <div class="check-icon">✓</div>
-          <div class="benefit-text">
-            <h4>Smart Engagement Timing</h4>
-            <p>Reach customers at the perfect moment for maximum impact</p>
+        <div class="hero-visual">
+          <div class="platform-preview">
+            <img src="images/platform-preview.png" alt="MineMe Platform Interface">
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="benefit-visual">
-      <img src="images/C" alt="MineMe Platform Dashboard">
-    </div>
-  </div>
-</section>
+    <!-- Features Section -->
+    <section id="features" class="personalization-section">
+      <div class="section-container">
+        <div class="section-header">
+          <h2><span class="accent-text">Personalization, perfected</span></h2>
+          <h3>It’s time to capture <b>100% of opportunity for 100% of your accounts</b></h3>
+        </div>
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-item">
+            <div class="feature-content">
 
-<!-- Results & Metrics -->
+              <h3>Stop missing <br><span class="accent-text">million-dollar</span>&nbsp; moments</h3>
+              <p class="feature-description">MineMe blends <b>market intelligence</b> with your <b>customer</b> data to identify and prioritize every <b>opportunity to grow</b>.
+                  From funding rounds to product launches, get instantly alerted to what matters, when it matters.
+                </p>
+            </div>
+            <div class="feature-visual gradient-swell-1">
+              <img src="images/feature1-visual.png" alt="Feature 1 Visual">
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div class="feature-item reverse">
+            <div class="feature-content">
+
+              <h3>The right message, at the right time,<span class="accent-text">every time</span></h3>
+                <p class="feature-description">Transform insights into action across your entire portfolio.
+                  MineMe intelligence <b>predicts next-best actions</b>, prioritizing <b>highest value opportunities</b> and making every customer feel like your only customer.
+                <br>
+                <br>
+                  Our AI crafts <b>hyper-personalized messaging</b> for perfectly timed outreach at <b>critical moments in the customer journey</b> - allowing you to scale white glove service to every account.
+                </p>
+            </div>
+            <div class="feature-visual gradient-swell-2">
+              <img src="images/feature2-visual.png" alt="Feature 2 Visual">
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="feature-item">
+            <div class="feature-content">
+      
+              <h3>Focus on &nbsp;<span class="accent-text">strategy,</span><br>not spreadsheets</h3>
+                <p class="feature-description">See your <b>impact in real-time</b>. Track how proactive outreach drives revenue, then replicate <b>winning plays</b> across your portfolio.
+                  <br>
+                  <br> Watch engagement translate directly into revenue <b>expansion & retention</b>, empowering every member on your team to <b>exceed your goals.</b></p>
+            </div>
+            <div class="feature-visual gradient-swell-3">
+              <img src="images/feature3gif%20(1).gif" alt="Feature 3 Visual">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Benefits -->
+    <section class="platform-benefits">
+      <div class="section-container">
+        <div class="benefit-content">
+
+          <h2>One Platform, <span class="gradient-highlight">Endless Possibilities</span></h2>
+          <p class="typewriter-container">
+            MineMe's AI copilot helps your customer engagement teams 
+            <span class="typewriter"></span>
+          </p>
+
+          <div class="benefits-list">
+            <div class="benefit-item">
+              <div class="check-icon">✓</div>
+              <div class="benefit-text">
+                <h4>Real-time Customer Insights</h4>
+                <p>Monitor and analyze customer behavior as it happens</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="check-icon">✓</div>
+              <div class="benefit-text">
+                <h4>Automated Content Generation</h4>
+                <p>Create personalized messages at scale with AI assistance</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="check-icon">✓</div>
+              <div class="benefit-text">
+                <h4>Smart Engagement Timing</h4>
+                <p>Reach customers at the perfect moment for maximum impact</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefit-visual">
+          <img src="images/C" alt="MineMe Platform Dashboard">
+        </div>
+      </div>
+    </section>
+
+    <!-- Results & Metrics -->
 
 
 
 
-<!-- Wrap all content after scrolling features -->
-<div class="post-scroll-content">
-    <!-- Integration Section -->
-    <section class="integrations">
-        <div class="section-container">
-            <div class="integration-content text-center">
-              <br>
-                <h2>1-click integration, no code required</h2>
-                
-                <div class="logo-carousel">
-                    <div class="logo-track">
-                        <!-- Duplicate logos for seamless scroll -->
-                        <div class="logo-slide">
-                            <img src="images/salesforce-logo.svg" alt="Salesforce">
-                            <img src="images/github-logo.svg" alt="GitHub">
-                            <img src="images/slack-logo.svg" alt="Slack">
-                            <img src="images/zendesk-logo.svg" alt="Zendesk">
-                            <img src="images/intercom-logo.svg" alt="Intercom">
-                            <img src="images/notion-logo.svg" alt="Notion">
-                        </div>
-                        <!-- Duplicate for infinite scroll -->
-                        <div class="logo-slide">
-                            <img src="images/Salesforce.png" alt="Salesforce">
-                            <img src="images/github-logo.svg" alt="GitHub">
-                            <img src="images/slack-logo.svg" alt="Slack">
-                            <img src="images/zendesk-logo.svg" alt="Zendesk">
-                            <img src="images/intercom-logo.svg" alt="Intercom">
-                            <img src="images/notion-logo.svg" alt="Notion">
-                          </div>
+    <!-- Wrap all content after scrolling features -->
+    <div class="post-scroll-content">
+        <!-- Integration Section -->
+        <section class="integrations">
+            <div class="section-container">
+                <div class="integration-content text-center">
+                  <br>
+                    <h2>1-click integration, no code required</h2>
+                    
+                    <div class="logo-carousel">
+                        <div class="logo-track">
+                            <!-- Duplicate logos for seamless scroll -->
+                            <div class="logo-slide">
+                                <img src="images/salesforce-logo.svg" alt="Salesforce">
+                                <img src="images/github-logo.svg" alt="GitHub">
+                                <img src="images/slack-logo.svg" alt="Slack">
+                                <img src="images/zendesk-logo.svg" alt="Zendesk">
+                                <img src="images/intercom-logo.svg" alt="Intercom">
+                                <img src="images/notion-logo.svg" alt="Notion">
+                            </div>
+                            <!-- Duplicate for infinite scroll -->
+                            <div class="logo-slide">
+                                <img src="images/Salesforce.png" alt="Salesforce">
+                                <img src="images/github-logo.svg" alt="GitHub">
+                                <img src="images/slack-logo.svg" alt="Slack">
+                                <img src="images/zendesk-logo.svg" alt="Zendesk">
+                                <img src="images/intercom-logo.svg" alt="Intercom">
+                                <img src="images/notion-logo.svg" alt="Notion">
+                              </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="global-cta">
-        <div class="cta-container">
-            <h2>Capture 100% of opportunity for 100% of your accounts</h2>
-
-            <p>Ready to learn how?</p>
-            <div class="cta-buttons">
-                <a href="demo.html" class="cta-primary">Schedule Demo</a>
-                <a href="demo.html" class="cta-secondary">Stay Updated</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+        <!-- CTA Section -->
+        <section class="global-cta">
+          <div class="cta-container">
+            <h2>Ready to learn how?</h2>
+            <br>
+            <div class="cta-buttons">
+              <a href="demo.html" class="primary-btn">Schedule Demo</a>
+              &nbsp;
+              &nbsp;
+              <a href="demo.html" class="primary-btn">Stay Updated</a>
+            </div>
+          </div>
+        </section>
 
-      <div class="footer-bottom">
-        <div class="footer-bottom-left">
-          <img src="images/minemeM.png" alt="MineMe Logo">
-          <span class="copyright">© 2024 MineMe. All rights reserved.</span>
-        </div>
-        <div class="social-icons">
-          <a href="mailto:info@minemedata.com">
-            <img src="images/mailicon.svg" alt="Email" class="social-icon">
-          </a>
-          <a href="https://linkedin.com/company/mineme" target="_blank">
-            <img src="images/linkedinicon.svg" alt="LinkedIn" class="social-icon">
-          </a>
-          <a href="https://x.com/minemedata" target="_blank">
-            <img src="images/xicon.svg" alt="X" class="social-icon">
-          </a>
-          <a href="https://instagram.com/mineme_data" target="_blank">
-            <img src="images/instaicon.svg" alt="Instagram" class="social-icon">
-          </a>
-        </div>
-      </div>
-    </footer>
-</div>
-<script src="main.js" defer></script>
-<script src="pages.js" defer></script>
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-links">
+              <a href="platform.html">Platform Overview</a>
+              <a href="solutions.html">Solutions</a>
+              <a href="about.html">About Us</a>
+              <a href="careers.html">Careers</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="footer-bottom-left">
+              <img src="images/minemeM.png" alt="MineMe Logo">
+              <span class="copyright">© 2024 MineMe. All rights reserved.</span>
+            </div>
+            <div class="social-icons">
+              <a href="mailto:info@minemedata.com">
+                <img src="images/mailicon.svg" alt="Email" class="social-icon">
+              </a>
+              <a href="https://linkedin.com/company/mineme" target="_blank">
+                <img src="images/linkedinicon.svg" alt="LinkedIn" class="social-icon">
+              </a>
+              <a href="https://x.com/minemedata" target="_blank">
+                <img src="images/xicon.svg" alt="X" class="social-icon">
+              </a>
+              <a href="https://instagram.com/mineme_data" target="_blank">
+                <img src="images/instaicon.svg" alt="Instagram" class="social-icon">
+              </a>
+            </div>
+          </div>
+        </footer>
+    </div>
+    <script src="main.js" defer></script>
+    <script src="pages.js" defer></script>
 </body>
 </html>
