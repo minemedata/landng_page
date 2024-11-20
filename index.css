@@ -1268,3 +1268,41 @@ body::after {
 }
 
 /* Remove previous typewriter styles */
+
+.integration-logos {
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+}
+
+.logo-grid img {
+    height: 40px;  /* Adjust this value based on your needs */
+    width: auto;
+    object-fit: contain;
+    opacity: 0.8;  /* Optional: makes logos slightly subtle */
+    transition: opacity 0.3s ease;
+}
+
+.logo-grid img:hover {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-grid {
+        gap: 2rem;
+    }
+    
+    .logo-grid img {
+        height: 30px;  /* Smaller on mobile */
+    }
+}
