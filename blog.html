@@ -6,24 +6,6 @@
   <title>MineMe - Blog & Insights</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="blog.css">
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('navbar.html')
-              .then(response => response.text())
-              .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-
-                // Highlight current page in navigation
-                const currentPage = window.location.pathname.split('/').pop();
-                const navLinks = document.querySelectorAll('.nav-links a');
-                navLinks.forEach(link => {
-                  if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                  }
-                });
-              });
-    });
-  </script>
 </head>
 <body>
 <div id="navbar-placeholder"></div>
