@@ -453,3 +453,37 @@ body::after {
     }
 }
 
+.funders-section {
+    padding: 4rem 2rem;  /* Added horizontal padding */
+  }
+  
+  .section-container {
+    max-width: 1200px;  /* Add a max-width to match other sections */
+    margin: 0 auto;     /* Center the container */
+    padding: 0 2rem;    /* Additional inner padding */
+  }
+  
+  .funders-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    max-width: 800px;
+  }
+
+  .funders-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .funders-list li::before {
+    content: "•";
+    color: var(--accent-coral);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
