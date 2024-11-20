@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="footer-section">
                     <h4>MineMe</h4>
                     <ul>
-                        <li><a href="platform.html">Platform Overview</a></li>
-                        <li><a href="solutions.html">Solutions</a></li>
-                        <li><a href="cases.html">Use Cases</a></li>
+                        <li><a href="https://www.minemedata.com/s">Platform Overview</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <!-- <li><a href="cases.html">Use Cases</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="documentation.html">Documentation</a></li> -->
                     </ul>
                 </div>
 
-                <div class="footer-section">
+                <!-- <div class="footer-section">
                     <h4>Platform</h4>
                     <ul>
                         <li><a href="platform.html">Overview</a></li>
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="updates.html">Platform Updates</a></li>
                     </ul>
-                </div>
+                </div> -->
 
                 <div class="footer-section">
                     <h4>Support</h4>
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="privacy.html">Privacy & Terms</a></li>
                         <li><a href="cookies.html">Cookie Policy</a></li>
-                        <li><a href="status.html">System Status</a></li>
+                       <!-- <li><a href="status.html">System Status</a></li> -->
                     </ul>
                 </div>
 
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h4>Company</h4>
                     <ul>
                         <li><a href="team.html">Our Team</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <!-- <li><a href="blog.html">Blog</a></li> -->  
                         <li><a href="careers.html">Careers</a></li>
                     </ul>
                 </div>
