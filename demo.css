@@ -2,7 +2,7 @@
 :root {
     --primary-color: #2B3A67;
     --secondary-color: #496A81;
-    --accent-color: #FF6B6B;
+    --accent-color: #c64b4b;
     --background-light: #f8f9fc;
     --text-primary: #2c3e50;
     --text-secondary: #64748b;
@@ -340,7 +340,7 @@ body {
     background: linear-gradient(135deg, 
         #f8f9ff 0%,
         #adcaff 45%,
-        #ff6b6b 85%
+        #c64b4b 85%
     );
 }
 

@@ -2,8 +2,8 @@
 :root {
     --primary-blue: #2B3A67;
     --secondary-blue: #496A81;
-    --accent-coral: #FF6B6B;
-    --accent-coral-light: #FF8E8E;
+    --accent-coral: #c64b4b;
+    --accent-coral-light: #c64b4b;
     --light-bg: #f7f9fc;
     --text-dark: #2B3A67;
     --text-light: #666;
@@ -100,7 +100,7 @@ h1 {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+    background: linear-gradient(135deg, #c64b4b 0%, #FF8E8E 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -142,10 +142,13 @@ h1 {
 
 /* Buttons */
 .primary-btn {
-    padding: 1rem 2rem;
-    background: var(--gradient-accent);
+    padding: 0.75rem 1.75rem;
+    background: #c64b4b;
     color: white;
-    border-radius: 8px;
+    text-align: center;
+    border-radius: 10px;
+    height: 55px;
+    width: 230px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;

@@ -4,8 +4,8 @@
 :root {
     --primary-blue: #2B3A67;
     --secondary-blue: #496A81;
-    --accent-coral: #FF6B6B;
-    --accent-coral-light: #FF8E8E;
+    --accent-coral: #c64b4b;
+    --accent-coral-light: #c64b4b;
     --accent-purple: #9D7FEA;
     --accent-blue-light: #7FB5EA;
     /* Gradient colors with reduced opacity for overlays */
@@ -160,7 +160,7 @@ body::after {
 .shape-2 {
     width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+    background: linear-gradient(135deg, #c64b4b, #FF8E8E);
     bottom: -50px;
     left: -50px;
 }
@@ -193,7 +193,7 @@ body::after {
     margin-bottom: 1.5rem;
 }
 .gradient-text {
-    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+    background: linear-gradient(135deg, #c64b4b 0%, #FF8E8E 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -208,7 +208,7 @@ body::after {
     font-weight: 800;
 }
 .hero-content .gradient-highlight {
-    background-image: linear-gradient(to right top, #FF6B6B, #9D7FEA);
+    background-image: linear-gradient(to right top, #c64b4b, #9D7FEA);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: var(--primary-blue);
@@ -280,6 +280,7 @@ body::after {
     text-decoration: none;
     transition: all 0.3s ease;
 }
+
 .primary-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(43,58,103,0.2);

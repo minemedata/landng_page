@@ -2,7 +2,7 @@
 :root {
     --primary-blue: #2B3A67;
     --secondary-blue: #496A81;
-    --accent-coral: #FF6B6B;
+    --accent-coral: #c64b4b;
     --bg-light: #f8f9ff;
     --text-dark: #2B3A67;
     --text-light: #666;
@@ -785,18 +785,24 @@ section {
 }
 
 .primary-btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: #007bff;
+    padding: 0.75rem 1.75rem;
+    background: #c64b4b;
     color: white;
+    text-align: center;
+    border-radius: 10px;
+    height: 55px;
+    width: 230px;
+    font-weight: 600;
     text-decoration: none;
-    border-radius: 6px;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
 }
 
+
 .primary-btn:hover {
-    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(43,58,103,0.2);
 }
+
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
