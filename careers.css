@@ -196,3 +196,12 @@
 .hero-content h1 {
   margin-bottom: 2rem;  /* space between heading and subtitle */
 }
+
+.departments-section h2 {
+    font-size: 3.0rem;  /* Increased size */
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+    font-weight: bold;
+    text-align: left;
+    padding-left: 1rem;  /* Match the hero section padding */
+}
