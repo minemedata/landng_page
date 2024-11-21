@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy & Terms - MineMe</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles/legal.css">
+    <link rel="icon" href="images/MInemeBlueM.png">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="loadNavbar.js"></script>
+    <script src="loadFooter.js"></script>
 </head>
 <body>
-    <div id="header-container"></div>
+    <div id="navbar-placeholder"></div>
 
     <main>
         <!-- Hero Section -->
         <section class="legal-hero">
             <div class="hero-container">
                 <h1>Privacy & Terms</h1>
-                <p class="hero-subtitle">Last updated: March 2024</p>
+                <p class="hero-subtitle">Last updated: November 2024</p>
             </div>
         </section>
 
@@ -23,35 +28,70 @@
         <section class="legal-content">
             <div class="content-container">
                 <h2>Privacy Policy</h2>
-                <p>At MineMe, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our service.</p>
+                <p>At MineMe, we take your privacy and data security seriously. This Privacy Policy explains how we collect, use, process, and safeguard your information when you use our AI-powered customer engagement platform.</p>
                 
                 <h3>Information We Collect</h3>
-                <p>We collect information that you provide directly to us, including:</p>
+                <p>We collect and process the following categories of data:</p>
                 <ul>
-                    <li>Account information</li>
-                    <li>Profile information</li>
-                    <li>Usage data</li>
-                    <li>Communication data</li>
+                    <li>Account & Authentication Data: Business email addresses, password hashes, and multi-factor authentication details</li>
+                    <li>Customer Success Data: CRM integrations, customer interaction history, and engagement metrics</li>
+                    <li>Usage Analytics: Platform interaction patterns, feature utilization, and performance metrics</li>
+                    <li>Integration Data: API tokens, webhook configurations, and third-party platform connections</li>
+                    <li>Machine Learning Data: Aggregated patterns used for AI model training and improvement</li>
+                </ul>
+
+                <h3>AI & Machine Learning Practices</h3>
+                <p>Our AI systems process your data with the following safeguards:</p>
+                <ul>
+                    <li>Data Segregation: Your data is processed in isolated environments</li>
+                    <li>Model Privacy: AI models are trained on anonymized, aggregated datasets</li>
+                    <li>Inference Privacy: Real-time predictions use only your authorized data</li>
+                    <li>Opt-out Options: Control over AI feature usage and data processing</li>
+                </ul>
+
+                <h3>Enterprise Security Measures</h3>
+                <p>We implement industry-leading security practices including:</p>
+                <ul>
+                    <li>End-to-end encryption for data in transit and at rest</li>
+                    <li>Regular third-party security audits</li>
+                    <li>Role-based access control (RBAC)</li>
+                    <li>24/7 infrastructure monitoring</li>
                 </ul>
 
                 <h2>Terms of Service</h2>
-                <p>By accessing and using MineMe, you agree to be bound by these Terms of Service.</p>
+                <p>By accessing and using MineMe's platform, you agree to these Terms of Service and acknowledge our data processing practices.</p>
                 
-                <h3>User Agreements</h3>
-                <p>When using our service, you agree to:</p>
+                <h3>Enterprise Usage Terms</h3>
+                <p>As a B2B service provider, we require:</p>
                 <ul>
-                    <li>Provide accurate information</li>
-                    <li>Maintain the security of your account</li>
-                    <li>Comply with all applicable laws</li>
-                    <li>Not misuse our services</li>
+                    <li>Valid business email for account creation</li>
+                    <li>Compliance with API rate limits and usage quotas</li>
+                    <li>Proper configuration of integration permissions</li>
+                    <li>Adherence to data retention policies</li>
+                </ul>
+
+                <h3>AI Model Usage Rights</h3>
+                <p>Our AI capabilities are provided with the following terms:</p>
+                <ul>
+                    <li>Non-exclusive license to use AI-generated insights</li>
+                    <li>Prohibition on reverse engineering AI models</li>
+                    <li>Requirements for responsible AI usage</li>
+                    <li>Attribution requirements for AI-generated content</li>
+                </ul>
+
+                <h3>Service Level Agreement</h3>
+                <p>Enterprise customers are guaranteed:</p>
+                <ul>
+                    <li>99.9% platform uptime</li>
+                    <li>Maximum 4-hour response time for critical issues</li>
+                    <li>Regular feature updates and improvements</li>
+                    <li>Dedicated customer success support</li>
                 </ul>
             </div>
         </section>
     </main>
 
-    <div id="footer-container"></div>
-
-    <script src="scripts/loadHeader.js"></script>
-    <script src="scripts/loadFooter.js"></script>
+    <div id="footer-placeholder"></div>
+    <script src="main.js"></script>
 </body>
 </html> 
