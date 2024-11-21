@@ -622,7 +622,7 @@ body::after {
     font-size: 0.875rem;
 }
 .platform-benefits {
-    padding: 120px 0;
+    padding: 50px 0;
     background-color: #f8f9ff;
 }
 
@@ -638,21 +638,8 @@ body::after {
     color: var(--primary-blue);
 }
 
-.typewriter-container {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    color: #4A5568;
-    margin-bottom: 2rem;
-}
 
-.typewriter {
-    color: var(--accent-coral);
-    font-weight: 600;
-    border-right: 2px solid var(--accent-coral);
-    display: inline-block;
-    margin: 0;
-    animation: blink-caret .75s step-end infinite;
-}
+
 
 .benefits-list {
     margin-top: 3rem;
@@ -1295,15 +1282,17 @@ body::after {
 }
 
 .typewriter-container {
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   line-height: 1.6;
+  font-weight: 800;
   color: #4A5568;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
 }
 
 .typewriter {
   color: var(--accent-coral);
-  font-weight: 600;
+  font-weight: 800;
+  font-size: 1.4rem;
   border-right: 2px solid var(--accent-coral);
   display: inline-block;
   margin: 0;
