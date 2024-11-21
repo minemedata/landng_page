@@ -585,3 +585,49 @@ input, textarea {
 .contact-sidebar > * + * {
   margin-top: 1rem;
 }
+
+/* Global CTA Section */
+.global-cta {
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .global-cta {
+        padding: 3rem 1rem;
+    }
+
+    .cta-container h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;  /* Stack buttons vertically */
+        align-items: center;
+        gap: 1rem;              /* Space between buttons */
+    }
+
+    .cta-buttons .primary-btn {
+        width: 100%;            /* Full width buttons */
+        max-width: 280px;       /* Maximum width */
+        margin: 0;              /* Remove default margins */
+        display: block;         /* Ensure block display */
+        text-align: center;     /* Center text */
+    }
+}
