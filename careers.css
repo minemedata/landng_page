@@ -24,47 +24,24 @@
     color: var(--primary-blue);
     font-weight: 600;
     font-size: 0.875rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 .hero-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
-}
-.hero-content-left {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns items to the left */
-    text-align: left;
-}
-.hero-content-right {
-    padding-right: 2rem;
-    max-width: 500px;
-    padding-top: 6rem; /* Adds space to align with the title */
-}
-.gradient-highlight {
-    position: relative;
-    display: inline-block;
-}
-.gradient-highlight::before {
-    content: "";
-    position: absolute;
-    left: -0.25em;
-    right: -0.25em;
-    top: 0;
-    bottom: 0;
-    background: linear-gradient(120deg,
-    rgba(255, 107, 107, 0.2) 0%,
-    rgba(255, 142, 142, 0.2) 100%);
-    border-radius: 0.25em;
-    z-index: -1;
-    transform: rotate(-2deg);
+    align-items: center;
+    text-align: center;
 }
 .careers-hero h1 {
     font-size: 3.5rem;
     color: var(--text-dark);
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    text-align: center;
+    max-width: 100%;
 }
 
 .careers-hero p {
@@ -76,9 +53,10 @@
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--text-light);
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 2rem auto 0;
     line-height: 1.6;
+    text-align: center;
 }
 
 /* Mission Section */
@@ -207,4 +185,14 @@
     .benefits-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  margin-bottom: 2rem;  /* space between heading and subtitle */
 }
