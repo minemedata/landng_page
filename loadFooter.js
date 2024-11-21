@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="footer-section">
                     <h4>MineMe</h4>
                     <ul>
-                        <li><a href="https://www.minemedata.com/s">Platform Overview</a></li>
-                        <li><a href="features.html">Features</a></li>
+                        <li><a href="https://www.minemedata.com/">Platform Overview</a></li>
+                        <li><a href="index.html#features">Features</a></li>
                         <!-- <li><a href="cases.html">Use Cases</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="documentation.html">Documentation</a></li> -->
@@ -25,24 +25,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div> -->
 
                 <div class="footer-section">
-                    <h4>Support</h4>
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="team.html#vision">Our Vision</a></li>
+                        <!-- <li><a href="blog.html">Blog</a></li> -->  
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get In Touch</h4>
                     <ul>
                         <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="demo.html">Schedule Demo</a></li>
+                       <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
                         <li><a href="privacy-terms.html">Privacy & Terms</a></li>
                         <li><a href="cookie-policy.html">Cookie Policy</a></li>
                        <!-- <li><a href="status.html">System Status</a></li> -->
                     </ul>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="team.html">Our Team</a></li>
-                        <!-- <li><a href="blog.html">Blog</a></li> -->  
-                        <li><a href="careers.html">Careers</a></li>
-                    </ul>
-                </div>
             </div>
+
 
             <div class="footer-bottom">
                 <div class="social-icons">
