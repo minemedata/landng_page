@@ -1077,7 +1077,8 @@ body::after {
     position: relative;
     display: inline-block;
     color: #2B3A67;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 2.6rem;
     z-index: 1;
 }
 
@@ -1212,6 +1213,7 @@ body::after {
 
 .feature-content h3 {
     font-size: 2.6rem;
+    font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: var(--primary-blue);
