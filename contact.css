@@ -8,12 +8,13 @@
     --text-primary: #2c3e50;
     --text-secondary: #64748b;
     --orange-gradient: #FFB347;
+    --font-primary: sans-serif;
 }
 
 /* Simplified body background */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-primary);
     position: relative;
     overflow-x: hidden;
     background: #f8f9ff; /* Fallback */
@@ -204,10 +205,18 @@ body::before {
 .contact-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 2rem;
+    padding: 0 2rem;
+}
+
+/* If you want the content to take up more width within the container */
+.contact-sidebar {
+    width: 100%;
+}
+
+.contact-card {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* Contact Form */
@@ -630,4 +639,20 @@ input, textarea {
         display: block;         /* Ensure block display */
         text-align: center;     /* Center text */
     }
+}
+
+.contact-card .submit-btn {
+    margin-bottom: 2rem;
+    text-decoration: none;  /* Remove underline */
+    display: block;         /* Makes it take full width */
+    text-align: center;     /* Centers the text */
+    width: fit-content;     /* Makes button width fit content */
+    margin-left: auto;      /* Centers the button */
+    margin-right: auto;     /* Centers the button */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-info {
+    font-family: var(--font-primary);
 }

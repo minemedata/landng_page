@@ -1068,3 +1068,9 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+.team-member-name,
+.team-member-role,
+.team-description {
+    font-family: var(--font-primary);
+}

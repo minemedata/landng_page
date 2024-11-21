@@ -12,6 +12,7 @@
     --text-color: #dad4d4;
     --light-bg: #f7f9fc;
     --white: #ffffff;
+    --font-primary: sans-serif;
 }
 .icon{
     background-color: #f7f9fc;
@@ -19,7 +20,7 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: var(--font-primary);
     background-color: #f7f9fc;
     color: #2B3A67;
     line-height: 1.6;

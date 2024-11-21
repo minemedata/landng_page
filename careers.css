@@ -6,6 +6,7 @@
     --bg-light: #f8f9ff;
     --text-dark: #2B3A67;
     --text-light: #666;
+    --font-primary: sans-serif;
 }
 
 /* Careers Hero */
@@ -15,6 +16,7 @@
     text-align: center;
     position: relative;
     overflow: hidden;
+    font-family: var(--font-primary);
 }
 .hero-badge {
     display: inline-block;
@@ -25,6 +27,7 @@
     font-weight: 600;
     font-size: 0.875rem;
     margin-bottom: 2rem;
+    font-family: var(--font-primary);
 }
 .hero-container {
     max-width: 100%;
@@ -34,6 +37,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    font-family: var(--font-primary);
 }
 .careers-hero h1 {
     font-size: 3.5rem;
@@ -42,6 +46,7 @@
     line-height: 1.2;
     text-align: center;
     max-width: 100%;
+    font-family: var(--font-primary);
 }
 
 .careers-hero p {
@@ -49,6 +54,7 @@
     opacity: 0.9;
     max-width: 600px;
     margin: 0 auto 2rem;
+    font-family: var(--font-primary);
 }
 .hero-subtitle {
     font-size: 1.25rem;
@@ -57,6 +63,7 @@
     margin: 2rem auto 0;
     line-height: 1.6;
     text-align: center;
+    font-family: var(--font-primary);
 }
 
 /* Mission Section */
@@ -64,6 +71,7 @@
     padding: 4rem 2rem;
     background: var(--white);
     text-align: center;
+    font-family: var(--font-primary);
 }
 
 .mission-section p {
@@ -72,12 +80,14 @@
     padding-top: 1rem;
     font-size: 1.25rem;
     line-height: 1.6;
+    font-family: var(--font-primary);
 }
 
 /* Departments Section */
 .departments-section {
     padding: 4rem 2rem;
     background: var(--light-bg);
+    font-family: var(--font-primary);
 }
 
 .departments-grid {
@@ -93,6 +103,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     transition: transform 0.3s ease;
+    font-family: var(--font-primary);
 }
 
 .department-card:hover {
@@ -102,6 +113,7 @@
 .department-header h3 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    font-family: var(--font-primary);
 }
 
 .position-list {
@@ -116,6 +128,7 @@
 .position-list li {
     padding: 0.5rem 0;
     color: var(--secondary-color);
+    font-family: var(--font-primary);
 }
 
 .department-btn {
@@ -126,6 +139,7 @@
     text-decoration: none;
     border-radius: 6px;
     transition: all 0.3s ease;
+    font-family: var(--font-primary);
 }
 
 .department-btn:hover {
@@ -137,6 +151,7 @@
 .benefits-section {
     padding: 6rem 2rem;
     background: var(--white);
+    font-family: var(--font-primary);
 }
 
 .benefits-grid {
@@ -152,6 +167,7 @@
     background: var(--light-bg);
     border-radius: 12px;
     transition: transform 0.3s ease;
+    font-family: var(--font-primary);
 }
 
 .benefit-card:hover {
@@ -161,6 +177,7 @@
 .benefit-card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
+    font-family: var(--font-primary);
 }
 
 
@@ -191,10 +208,12 @@
   text-align: center;
   max-width: 100%;
   margin: 0 auto;
+  font-family: var(--font-primary);
 }
 
 .hero-content h1 {
   margin-bottom: 2rem;  /* space between heading and subtitle */
+  font-family: var(--font-primary);
 }
 
 .departments-section h2 {
@@ -204,6 +223,7 @@
     font-weight: bold;
     text-align: left;
     padding-left: 1rem;  /* Match the hero section padding */
+    font-family: var(--font-primary);
 }
 
 /* Global CTA Section */
@@ -211,6 +231,7 @@
     padding: 4rem 2rem;
     text-align: center;
     background: var(--bg-light);
+    font-family: var(--font-primary);
 }
 
 .cta-container {
@@ -249,4 +270,12 @@
         display: block;         /* Ensure block display */
         text-align: center;     /* Center text */
     }
+}
+
+/* Forms or application related elements */
+.application-form input,
+.application-form textarea,
+.application-form select,
+.submit-button {
+    font-family: var(--font-primary);
 }
