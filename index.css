@@ -570,6 +570,7 @@ body::after {
 }
 .hero-content h1 {
     font-size: 3.5rem;
+    line-height: .9;
     color: #2B3A67;
 }
 
@@ -623,15 +624,63 @@ body::after {
 .platform-benefits {
     padding: 120px 0;
     background-color: #f8f9ff;
-    .benefit-content p {
-        max-width: 600px;
-        margin-bottom: 2rem;
-        white-space: normal;
-    }
 }
 
 .benefit-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.benefit-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-blue);
+}
+
+.typewriter-container {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #4A5568;
+    margin-bottom: 2rem;
+}
+
+.typewriter {
+    color: var(--accent-coral);
+    font-weight: 600;
+    border-right: 2px solid var(--accent-coral);
+    display: inline-block;
+    margin: 0;
+    animation: blink-caret .75s step-end infinite;
+}
+
+.benefits-list {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 1rem;
+    text-align: left;
     max-width: 600px;
+    width: 100%;
+}
+
+.check-icon {
+    flex-shrink: 0;
+}
+
+.benefit-text {
+    flex: 1;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--accent-coral) }
 }
 
 .section-badge {

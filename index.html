@@ -117,13 +117,12 @@
     <section class="platform-benefits">
       <div class="section-container">
         <div class="benefit-content">
-
-          <h2>One Platform, <span class="gradient-highlight">Endless Possibilities</span></h2>
-          <p class="typewriter-container">
+          <h2 class="text-center">Turn Every Signal Into Success</h2>
+          <p class="typewriter-container text-center">
             MineMe's AI copilot helps your customer engagement teams 
             <span class="typewriter"></span>
           </p>
-
+    
           <div class="benefits-list">
             <div class="benefit-item">
               <div class="check-icon">✓</div>
@@ -241,6 +240,57 @@
           </div>
         </footer> -->
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const phrases = [
+          "personalize every touchpoint",
+          "build lifetime loyalty",
+          "prevent silent churn",
+          "engage early & win often",
+          "automate customer intelligence"
+        ];
+        
+        let currentPhraseIndex = 0;
+        const typewriterElement = document.querySelector('.typewriter');
+        
+        function typePhrase(phrase) {
+          let charIndex = 0;
+          typewriterElement.textContent = '';
+          
+          function type() {
+            if (charIndex < phrase.length) {
+              typewriterElement.textContent += phrase[charIndex];
+              charIndex++;
+              setTimeout(type, 50); // Typing speed
+            } else {
+              setTimeout(erasePhrase, 2000); // Wait before erasing
+            }
+          }
+          
+          type();
+        }
+        
+        function erasePhrase() {
+          let text = typewriterElement.textContent;
+          
+          function erase() {
+            if (text.length > 0) {
+              text = text.slice(0, -1);
+              typewriterElement.textContent = text;
+              setTimeout(erase, 30); // Erasing speed
+            } else {
+              currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+              setTimeout(() => typePhrase(phrases[currentPhraseIndex]), 500);
+            }
+          }
+          
+          erase();
+        }
+        
+        // Start the animation
+        typePhrase(phrases[0]);
+      });
+    </script>
     <script src="main.js" defer></script>
     <script src="pages.js" defer></script>
 </body>
