@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <a href="contact.html">Contact Us</a>
                 </div>
                 <div class="nav-right">
-                    <a href="demo.html" class="primary-btn pulse" style="text-align: center;">Schedule A Demo</a>
+                    <a href="demo.html" class="primary-btn" style="text-align: center;">Schedule A Demo</a>
                 </div>
             </div>
         </nav>

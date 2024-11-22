@@ -1086,8 +1086,8 @@ body::after {
 .accent-text::after {
     content: '';
     position: absolute;
-    left: -0.25em;
-    right: -0.25em;
+    left: -0.38em;
+    right: -0.38em;
     top: 0;
     bottom: 0;
     background: linear-gradient(120deg,

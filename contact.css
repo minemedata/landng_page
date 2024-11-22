@@ -656,3 +656,142 @@ input, textarea {
 .contact-info {
     font-family: var(--font-primary);
 }
+
+/* Update contact card layout */
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Create horizontal layout for top section */
+.contact-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+/* Adjust submit button container */
+.mailing-list-container {
+    flex: 1;
+}
+
+/* Adjust quick connect section */
+.quick-connect-container {
+    flex: 1;
+}
+
+/* Update features grid to two columns */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-top-row {
+        flex-direction: column;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Adjust mailing list button styling */
+.mailing-list-container .submit-btn {
+    padding: 1.25rem 2rem;    /* Increased padding */
+    font-size: 1.1rem;        /* Larger font size */
+    margin: 1rem auto;        /* Center the button with some vertical spacing */
+    min-width: 250px;         /* Minimum width */
+    width: 80%;              /* Take up most of the container width */
+    display: block;           /* Block display for full width */
+    text-align: center;       /* Center text */
+    height: fit-content;      /* Height based on content */
+    align-self: center;       /* Center in flex container */
+}
+
+/* Adjust container alignment */
+.mailing-list-container {
+    flex: 1;
+    display: flex;
+    align-items: center;      /* Center vertically */
+    justify-content: center;  /* Center horizontally */
+    padding: 1rem;           /* Add some padding */
+}
+
+/* Optional: enhance hover state */
+.mailing-list-container .submit-btn:hover {
+    transform: translateY(-3px);  /* Slightly more pronounced lift */
+    box-shadow: 0 6px 20px rgba(255,107,107,0.4);  /* Stronger shadow */
+}
+
+/* Desktop styles (above 768px) */
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.mailing-list-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.mailing-list-container .submit-btn {
+    padding: 1.25rem 2rem;
+    font-size: 1.1rem;
+    margin: 1rem auto;
+    min-width: 250px;
+    width: 80%;
+    display: block;
+    text-align: center;
+    height: fit-content;
+    align-self: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 12px;
+}
+
+/* Mobile styles (768px and below) */
+@media (max-width: 768px) {
+    .contact-top-row {
+        flex-direction: column;
+    }
+    
+    .mailing-list-container .submit-btn {
+        /* Reset to original mobile styling */
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .features-grid {
+        /* Reset to original mobile styling */
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .quick-connect-container {
+        margin-top: 2rem;
+    }
+}
