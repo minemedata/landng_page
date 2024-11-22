@@ -628,15 +628,24 @@ body {
         background: var(--white);
         padding: 1rem;
         box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        margin-bottom: 3rem;
     }
 
     .nav-links.active {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
     }
 
     .nav-links a {
         display: block;
         padding: 0.75rem 0;
+    }
+
+    .nav-right.active {
+        display: block;
+        justify-content: center;
+        padding-top: 2rem;
     }
 
 }
