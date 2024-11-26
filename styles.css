@@ -156,20 +156,29 @@ body {
     color: #0066FF;
 }
 .signup-btn {
-    padding: 0.625rem 1.25rem;
-    border: 1.5px solid #2c3e50;
-    border-radius: 6px;
-    color: #2c3e50;
+    padding: 0.75rem 1.75rem;
+    background: linear-gradient(135deg, #FF6B6B 0%, #c64b4b 100%);
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+    height: 45px; /* Slightly smaller for navbar */
+    font-weight: 600;
     text-decoration: none;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    transition: all 0.2s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(198, 75, 75, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .signup-btn:hover {
-    background-color: #cdddfd;
-    border-color: #0066FF;
-    color: #0066FF;
+    transform: translateY(-2px) scale(1.02);
+    background: linear-gradient(135deg, #FF8E8E 0%, #FF6B6B 100%);
+    box-shadow: 0 6px 20px rgba(198, 75, 75, 0.3);
 }
 
 /* Hero Section */
@@ -217,7 +226,7 @@ body {
         width: 230px;
         font-weight: 600;
         text-decoration: none;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
 }
 
 .primary-btn {
@@ -504,7 +513,7 @@ body {
         width: 230px;
         font-weight: 600;
         text-decoration: none;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
 }
 
 .cta-buttons .primary-btn:hover {
@@ -684,4 +693,187 @@ body {
 
 #features {
     scroll-margin-top: 60px; /* Adjust this value based on your navbar height */
+}
+
+/* Primary Button Base Styles - Add this near the top of your button styles */
+.primary-btn {
+    padding: 0.75rem 1.75rem;
+    background: linear-gradient(135deg, #FF6B6B 0%, #c64b4b 100%);
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+    height: 55px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(198, 75, 75, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect with gradient shift and scale */
+.primary-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    background: linear-gradient(135deg, #FF8E8E 0%, #FF6B6B 100%);
+    box-shadow: 0 6px 20px rgba(198, 75, 75, 0.3);
+}
+
+/* Active state */
+.primary-btn:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+/* Shine effect */
+.primary-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: translate(-100%, -100%) rotate(45deg);
+    transition: transform 0.6s;
+}
+
+.primary-btn:hover::before {
+    transform: translate(100%, 100%) rotate(45deg);
+}
+
+/* Update Global CTA buttons */
+.cta-buttons .primary-btn {
+    width: 230px;
+    background: linear-gradient(135deg, #FF6B6B 0%, #c64b4b 100%);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-buttons .primary-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    background: linear-gradient(135deg, #FF8E8E 0%, #FF6B6B 100%);
+    box-shadow: 0 6px 20px rgba(198, 75, 75, 0.3),
+                0 0 0 2px rgba(255, 107, 107, 0.2),
+                0 0 0 6px rgba(255, 107, 107, 0.1);
+}
+
+/* Update Demo Button Style */
+.demo-btn {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(198, 75, 75, 0.1) 100%);
+    color: #FF6B6B;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(135deg, #FF6B6B, #c64b4b) 1;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-btn:hover {
+    background: linear-gradient(135deg, #FF6B6B 0%, #c64b4b 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(198, 75, 75, 0.2);
+    border-image: none;
+    border-color: transparent;
+}
+
+/* Update Secondary Button Style */
+.secondary-btn {
+    padding: 0.75rem 1.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #FF6B6B;
+    color: #FF6B6B;
+    text-align: center;
+    border-radius: 12px;
+    height: 55px;
+    width: 230px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 107, 107, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(198, 75, 75, 0.15);
+    border-color: #FF8E8E;
+    color: #FF8E8E;
+}
+
+/* Update Hero Section Button Styles */
+.hero-cta .primary-btn {
+    padding: 0.75rem 1.75rem;
+    background: linear-gradient(135deg, #FF6B6B 0%, #c64b4b 100%);
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+    height: 55px;
+    width: 230px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(198, 75, 75, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hero-cta .primary-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    background: linear-gradient(135deg, #FF8E8E 0%, #FF6B6B 100%);
+    box-shadow: 0 6px 20px rgba(198, 75, 75, 0.3);
+}
+
+/* Optional: Add shine effect to both button types */
+.signup-btn::before,
+.hero-cta .primary-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%
+    );
+    transform: rotate(45deg) translateY(-200%);
+    transition: transform 0.6s;
+}
+
+.signup-btn:hover::before,
+.hero-cta .primary-btn:hover::before {
+    transform: rotate(45deg) translateY(200%);
 }
