@@ -1,8 +1,10 @@
 /* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 
 /* Root section - gradient variables */
 :root {
-    --primary-blue: #2B3A67;
+    --primary-blue: #04048c;
     --secondary-blue: #496A81;
     --accent-coral: #c64b4b;
     --accent-coral-light: #c64b4b;
@@ -19,6 +21,7 @@
     --cyan: #22D3EE;
     --indigo: #6366F1;
     --rose: #FB7185;
+    --font-primary: 'Montserrat', sans-serif;
 }
 
 /* Base styles for the flowing background */
@@ -26,6 +29,8 @@ body {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
     position: relative;
     overflow-x: hidden;
+    font-family: var(--font-primary);
+    color: var(--primary-blue);
 }
 
 /* Main gradient overlay */
@@ -176,6 +181,7 @@ body::after {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
+    font-family: var(--font-primary);
 }
 .hero-content {
     max-width: 600px;
@@ -188,7 +194,7 @@ body::after {
     border-radius: 20px;
     color: var(--primary-blue);
     font-weight: 600;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-primary);
     font-size: 0.875rem;
     margin-bottom: 1.5rem;
 }
@@ -212,12 +218,14 @@ body::after {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: var(--primary-blue);
+    
 }
 .gradient-highlight {
     position: relative;
     color: var(--primary-blue); /* Keep text color solid */
     z-index: 1;
     display: inline-block;
+    font-family: var(--font-primary);
 }
 .gradient-highlight::before {
     content: "";
@@ -572,7 +580,9 @@ body::after {
 .hero-content h1 {
     font-size: 3.5rem;
     line-height: .9;
-    color: #2B3A67;
+    color: var(--primary-blue);
+    font-family: var(--font-primary);
+
 }
 
 /* Social Proof */
@@ -1077,7 +1087,7 @@ body::after {
 .accent-text {
     position: relative;
     display: inline-block;
-    color: #2B3A67;
+    color: var(--primary-blue);
     font-weight: 700;
     font-size: 2.6rem;
     z-index: 1;

@@ -1,11 +1,15 @@
 /* team.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
 :root {
-    --primary-blue: #2B3A67;
+    --primary-blue: #04048c;
     --secondary-blue: #496A81;
     --accent-coral: #c64b4b;
     --bg-light: #f8f9ff;
     --text-dark: #2B3A67;
     --text-light: #666;
+    --font-primary: 'Montserrat', sans-serif;
 }
 /* Team Hero */
 .team-hero {
@@ -38,6 +42,7 @@
     font-size: 3.5rem;
     margin-bottom: 1rem;
     color: var(--primary-blue);
+    font-family: var(--font-primary);
 }
 .hero-subtitle {
     font-size: 1.25rem;

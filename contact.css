@@ -1,14 +1,15 @@
 /* contact.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #2B3A67;
+    --primary-color: #04048c;
     --secondary-color: #496A81;
     --accent-color: #c64b4b;
     --background-light: #f8f9fc;
     --text-primary: #2c3e50;
     --text-secondary: #64748b;
     --orange-gradient: #FFB347;
-    --font-primary: sans-serif;
+    --font-primary: 'Montserrat', sans-serif;
 }
 
 /* Simplified body background */

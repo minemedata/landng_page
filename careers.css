@@ -1,12 +1,14 @@
 /* careers.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 :root {
-    --primary-blue: #2B3A67;
+    --primary-blue: #04048c;
     --secondary-blue: #496A81;
     --accent-coral: #c64b4b;
     --bg-light: #f8f9ff;
     --text-dark: #2B3A67;
     --text-light: #666;
-    --font-primary: sans-serif;
+    --font-primary: 'Montserrat', sans-serif;
 }
 
 /* Careers Hero */
