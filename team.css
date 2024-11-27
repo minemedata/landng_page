@@ -53,6 +53,7 @@
 
 /* Testimonials Section */
 .testimonials-section {
+    
     padding: 4rem 2rem;
     background: var(--bg-light);
     text-align: center;
@@ -475,7 +476,7 @@ body::after {
 }
 
 .funders-section {
-    padding: 1rem 1rem;
+    padding: .25rem 1rem;
     background: #fff;
 }
 
@@ -680,7 +681,7 @@ section {
 .funders-section h2,
 .testimonials-section h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 3rem;
 }
 
@@ -829,7 +830,7 @@ section {
     .funders-section h2,
     .testimonials-section h2 {
         font-size: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     .leadership-grid {
@@ -947,7 +948,7 @@ section {
 
 /* Updated Funders Section */
 .funders-section {
-    padding: 3rem 2rem;
+    padding: 1rem 2rem;
     background: #fff;
 }
 
@@ -957,7 +958,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .funder-logo {
@@ -976,7 +977,7 @@ section {
     width: 100%;
     text-align: center;
     color: var(--text-light);
-    margin-top: 1rem;
+    margin-top: .35rem;
     font-style: italic;
 }
 
