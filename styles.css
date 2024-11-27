@@ -655,6 +655,11 @@ body {
         display: flex;
         flex-direction: column;
         padding: 1rem;
+        top: 65px;
+        left: 0;
+        right: 0;
+        align-items: flex-start;
+        width: 100%;
     }
 
     .nav-links a {
@@ -663,9 +668,14 @@ body {
     }
 
     .nav-right.active {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: auto;
         justify-content: center;
-        padding-top: 2rem;
+        margin-top: calc(100% + 10rem);
+        padding-top: 5rem;
+        z-index: 2000;
     }
 
 }

@@ -36,6 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.querySelector('.mobile-menu-overlay');
 
     hamburger.addEventListener('click', function() {
+        document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden';
+        
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
         navRight.classList.toggle('active');
@@ -51,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.classList.remove('active');
             navRight.classList.remove('active');
             overlay.classList.remove('active');
+            document.body.style.overflow = ''; // Reset scroll when closing menu
         }
     });
 
