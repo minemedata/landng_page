@@ -3,9 +3,9 @@
 
 
 :root {
-    --primary-blue: #04048c;
-    --secondary-blue: #496A81;
-    --accent-coral: #c64b4b;
+    --primary-color: #0d1172;
+    --secondary-color: #C5F6FF;
+    --accent-color: #f43a61;
     --bg-light: #f8f9ff;
     --text-dark: #2B3A67;
     --text-light: #666;
@@ -41,7 +41,7 @@
 .team-hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: var(--primary-blue);
+    color: var(--primary-color);
     font-family: var(--font-primary);
 }
 .hero-subtitle {
@@ -61,7 +61,7 @@
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 .testimonials-section h2 {
-    color: var(--primary-blue);
+    color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
@@ -76,7 +76,7 @@
 }
 .testimonial {
     background: rgba(255, 255, 255, 0.9);
-    border-left: 4px solid var(--accent-coral);
+    border-left: 4px solid var(--accent-color);
     padding: 1.5rem;
     margin: 0;
     border-radius: 8px;
@@ -113,7 +113,7 @@
     text-align: center;
 }
 .mission-content h2 {
-    color: var(--primary-blue);
+    color: var(--primary-color);
     font-size: 2rem;
     line-height: 1.6;
     margin-bottom: 1rem;
@@ -139,7 +139,7 @@
     text-align: center;
 }
 .mission-content h2 {
-    color: var(--primary-blue);
+    color: var(--primary-color);
     font-size: 2rem;
     line-height: 1.6;
     margin-bottom: 1rem;
@@ -212,6 +212,7 @@ blockquote cite {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 2.5rem;
+    color: var(--primary-color);
 }
 
 .leadership-grid {
@@ -224,10 +225,10 @@ blockquote cite {
 .leader-card {
     width: 100%;
     max-width: 400px;
-    background: #fff;
+    background: var(--secondary-color);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .leader-image {
@@ -270,11 +271,12 @@ blockquote cite {
 .leader-info h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    color: var(--primary-color);
 }
 
 .position {
     display: block;
-    color: #666;
+    color: var(--accent-color);
     margin-bottom: 1rem;
 }
 
@@ -369,7 +371,7 @@ blockquote cite {
 }
 
 .value-card h3 {
-    color: var(--primary-blue);
+    color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     position: relative;
@@ -382,7 +384,7 @@ blockquote cite {
     bottom: -0.5rem;
     width: 40px;
     height: 3px;
-    background: var(--accent-coral);
+    background: var(--accent-color);
     border-radius: 2px;
 }
 
@@ -515,7 +517,7 @@ body::after {
 .vision-title {
     text-align: center;
     font-size: 2.5rem;
-    color: var(--primary-blue);
+    color: var(--primary-color);
     margin-bottom: 4rem;
     position: relative;
 }
@@ -528,7 +530,7 @@ body::after {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: var(--accent-coral);
+    background: var(--accent-color);
     border-radius: 2px;
 }
 
@@ -561,12 +563,12 @@ body::after {
 }
 
 .vision-quote::before {
-    content: '"';
+    content: '';
     position: absolute;
     left: 0;
     top: -1rem;
     font-size: 4rem;
-    color: var(--primary-blue);
+    color: var(--primary-color);
     opacity: 0.2;
     font-family: Georgia, serif;
 }
@@ -772,42 +774,12 @@ section {
 }
 
 /* Global CTA */
-.global-cta {
-    background: #f0f0f0;
-    text-align: center;
-    padding: 4rem 2rem;
-}
-
-.cta-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.primary-btn {
-    padding: 0.75rem 1.75rem;
-    background: #c64b4b;
-    color: white;
-    text-align: center;
-    border-radius: 10px;
-    height: 55px;
-    width: 230px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
 
 
-.primary-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(43,58,103,0.2);
-}
+
+
+
+
 
 
 /* Responsive Design */
@@ -983,7 +955,7 @@ section {
 
 /* Vision Section Updates */
 .section-subtitle {
-    color: var(--accent-coral);
+    color: var(--accent-color);
     font-size: 1.2rem;
     margin: 2rem 0 1rem;
     text-align: center;
@@ -1004,13 +976,13 @@ section {
 .section-header {
   font-size: 3.2rem;  /* Increased from 2.5rem */
   font-weight: 700;
-  color: var(--primary-blue);
+  color: var(--primary-color);
   margin-bottom: 3rem;
   text-align: center;
 }
 
 .section-subtitle {
-  color: var(--accent-coral);
+  color: var(--accent-color);
   font-size: 1.8rem;  /* Increased from 1.2rem */
   margin: 3rem 0 1.5rem;
   text-align: center;
@@ -1018,7 +990,7 @@ section {
 }
 
 .testimonial-subtitle {
-  color: var(--accent-coral);
+  color: var(--accent-color);
   font-size: 1.8rem;
   margin: 1rem 0 2rem;
   text-align: center;
@@ -1061,7 +1033,7 @@ section {
 }
 
 .testimonial-subtitle {
-  color: var(--accent-coral);
+  color: var(--accent-color);
   font-size: 1.8rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -1080,3 +1052,11 @@ section {
 .team-description {
     font-family: var(--font-primary);
 }
+
+.leader-card .submit-btn {
+    background: var(--accent-color); /* Updated */
+}
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }

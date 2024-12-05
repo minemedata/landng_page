@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #04048c;
-    --secondary-color: #496A81;
-    --accent-color: #c64b4b;
+    --primary-color: #0d1172;
+    --secondary-color: #C5F6FF;
+    --accent-color: #f43a61;
     --background-light: #f8f9fc;
     --text-primary: #2c3e50;
     --text-secondary: #64748b;
@@ -81,23 +81,15 @@ body::before {
 }
 
 /* Simplified global-cta */
-.global-cta {
-    position: relative;
-    z-index: 1;
-    background: transparent;
-    padding: 80px 0;
-}
 
-/* Remove global-cta::before background */
-.global-cta::before {
-    display: none;
-}
+
+
 
 /* Update footer with seamless transition */
 
 
 /* Add smooth transitions */
-.contact-form-wrapper, .contact-card, .global-cta, .footer {
+.contact-form-wrapper, .contact-card, .footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
@@ -304,7 +296,7 @@ input:focus, textarea:focus {
 .submit-btn {
     width: 100%;
     padding: 0.75rem 1.5rem;
-    background: linear-gradient(135deg, var(--accent-color) 0%, #FF8E8E 100%);
+    background: var(--accent-color);
     color: white;
     border: none;
     border-radius: 8px;
@@ -365,6 +357,7 @@ input:focus, textarea:focus {
     transition: all 0.3s ease;
     text-decoration: none;
     color: var(--text-primary);
+    
 }
 .method-item:hover {
     background: var(--background-light);
@@ -597,12 +590,7 @@ input, textarea {
 }
 
 /* Global CTA Section */
-.global-cta {
-    padding: 4rem 2rem;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
+
 
 .cta-container {
     max-width: 800px;

@@ -47,7 +47,18 @@
 
     // Add UI configuration
     Cal("ui", {
-      styles: { branding: { brandColor: "#2B3A67" } },
+      cssVarsPerTheme: {
+        light: {
+          '--cal-brand': '#2B3A67',
+          '--cal-brand-emphasis': '#1a2440',
+          '--cal-brand-text': '#ffffff'
+        },
+        dark: {
+          '--cal-brand': '#2B3A67',
+          '--cal-brand-emphasis': '#1a2440',
+          '--cal-brand-text': '#ffffff'
+        }
+      },
       hideEventTypeDetails: false,
     });
 
@@ -108,9 +119,23 @@
     <div class="hero-right">
       <div id="my-cal-inline"></div>
       <script>
-        Cal("inline", {
-          elementOrSelector: "#my-cal-inline",
-          calLink: "archanas/mineme-demo"
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+          // Delay the calendar initialization slightly
+          setTimeout(() => {
+            Cal("inline", {
+              elementOrSelector: "#my-cal-inline",
+              calLink: "archanas/mineme-demo",
+              autoScroll: false,
+              config: {
+                hideEventTypeDetails: false,
+              }
+            });
+          }, 100);
+
+          // Prevent any automatic scrolling
+          window.history.scrollRestoration = 'manual';
+          window.scrollTo(0, 0);
         });
       </script>
     </div>

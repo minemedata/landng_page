@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="footer-section">
                     <h4>About Us</h4>
                     <ul>
-                        <li><a href="team.html">Our Team</a></li>
                         <li><a href="team.html#vision">Our Vision</a></li>
+                        <li><a href="team.html#team">Our Team</a></li>
                         <!-- <li><a href="blog.html">Blog</a></li> -->  
                     </ul>
                 </div>
@@ -53,19 +53,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <div class="footer-bottom">
                 <div class="social-icons">
-                    <a href="mailto:contact@mineme.com">
+                    <a href="mailto:info@minemedata.com">
                         <img src="images/mailicon.svg" alt="Email" class="social-icon">
                     </a>
                     <a href="https://linkedin.com/company/mineme" target="_blank">
                         <img src="images/linkedinicon.svg" alt="LinkedIn" class="social-icon">
                     </a>
-                    <a href="https://x.com/mineme" target="_blank">
+                    <a href="https://x.com/MineMeData" target="_blank">
                         <img src="images/xicon.svg" alt="X" class="social-icon">
                     </a>
-                    <a href="https://instagram.com/mineme" target="_blank">
+                    <a href="https://instagram.com/mineme_data" target="_blank">
                         <img src="images/instaicon.svg" alt="Instagram" class="social-icon">
                     </a>
-                    <a href="https://tiktok.com/@mineme" target="_blank">
+                    <a href="https://www.youtube.com/@MineMeData" target="_blank">
                         <img src="images/youtubeicon.svg" alt="Youtube" class="social-icon">
                     </a>
                 </div>

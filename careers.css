@@ -43,7 +43,7 @@
 }
 .careers-hero h1 {
     font-size: 3.5rem;
-    color: var(--text-dark);
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
     line-height: 1.2;
     text-align: center;
@@ -54,18 +54,20 @@
 .careers-hero p {
     font-size: 1.25rem;
     opacity: 0.9;
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto 2rem;
     font-family: var(--font-primary);
+    text-align: center;
+
 }
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--text-light);
     max-width: 100%;
-    margin: 2rem auto 0;
+    margin: 2rem 0;
     line-height: 1.6;
     text-align: center;
-    font-family: var(--font-primary);
+
 }
 
 /* Mission Section */
@@ -181,6 +183,49 @@
     margin-bottom: 1rem;
     font-family: var(--font-primary);
 }
+.values-section {
+    padding: 1rem 2rem;
+    padding-top: 2rem;
+
+    background: var(--bg-light);
+    font-family: var(--font-primary);
+}
+
+.values-section h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.value-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.value-card p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
 
 
 /* Responsive Design */
@@ -191,6 +236,9 @@
 
     .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .values-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -207,21 +255,24 @@
 }
 
 .hero-content {
-  text-align: center;
-  max-width: 100%;
-  margin: 0 auto;
-  font-family: var(--font-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: var(--font-primary);
 }
 
 .hero-content h1 {
-  margin-bottom: 2rem;  /* space between heading and subtitle */
-  font-family: var(--font-primary);
+    margin-bottom: 2rem;  /* space between heading and subtitle */
+    font-family: var(--font-primary);
 }
 
 .departments-section h2 {
     font-size: 3.0rem;  /* Increased size */
     margin-bottom: 2rem;
-    color: var(--text-dark);
+    color: var(--primary-color);
     font-weight: bold;
     text-align: left;
     padding-left: 1rem;  /* Match the hero section padding */
@@ -229,12 +280,7 @@
 }
 
 /* Global CTA Section */
-.global-cta {
-    padding: 4rem 2rem;
-    text-align: center;
-    background: var(--bg-light);
-    font-family: var(--font-primary);
-}
+
 
 .cta-container {
     max-width: 800px;

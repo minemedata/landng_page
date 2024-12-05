@@ -10,9 +10,9 @@
 }
 
 :root {
-    --primary-color: #04048c;    /* Dark blue from your logo */
-    --secondary-color: #496A81;  /* Complementary blue */
-    --accent-color: #d44c4c; /* Coral for CTAs */
+    --primary-color: #0d1172;    /* Dark blue from your logo */
+    --secondary-color: #C5F6FF;  /* Complementary blue */
+    --accent-color: #f43a61; /* Coral for CTAs */
     --text-color: #dad4d4;
     --light-bg: #f7f9fc;
     --white: #ffffff;
@@ -64,7 +64,7 @@ body {
     align-items: center;
     gap: 0rem; /* Adjusted gap */
     font-size: 2.6rem;
-    letter-spacing: 1.5px;
+    letter-spacing: -1px;
     font-weight: 450;
     color: var(--primary-blue);
     font-family: var(--font-primary);
@@ -266,6 +266,9 @@ body {
     gap: 1rem;
     flex-wrap: wrap;
 }
+.logo-container span {
+    color: #0d1172;
+}
 
 /* Features Section */
 .features {
@@ -314,12 +317,12 @@ body {
 .cta-container {
     max-width: 800px;
     margin: 0 auto;
-}
-
-.cta-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
+  }
+  
+  .cta-container h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
 
 /* Footer */
 .footer-content {
@@ -441,11 +444,12 @@ body {
 .global-cta {
     padding-top: 80px;
     padding-bottom: 80px;
+    background-color: var(--secondary-color);
     background-image:
             radial-gradient(circle at top left,
             rgba(255,107,107,.15) , transparent),
             radial-gradient(circle at bottom right,
-            rgba(43,58,103,.15), transparent);
+            rgba(43,58,103,.45), transparent);
 }
 
 .cta-container {
@@ -481,14 +485,7 @@ body {
     filter: blur(30px);
 }
 
-.global-cta h2 {
-    font-size: 2.75rem;
-    font-weight: 600;
-    margin-bottom: 1.25rem;
-    line-height: 1.2;
-    position: relative;
-    z-index: 2;
-}
+
 
 .global-cta p {
     font-size: 1.125rem;
@@ -887,3 +884,4 @@ body {
 .hero-cta .primary-btn:hover::before {
     transform: rotate(45deg) translateY(200%);
 }
+
