@@ -73,6 +73,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin: 2rem 0;
+    margin-top: 0;
 }
 .testimonial {
     background: rgba(255, 255, 255, 0.9);
@@ -172,7 +173,9 @@
 }
 
 .quote-container {
-    margin: 60px 0;
+    margin-bottom: 800px;
+   
+    margin-top: 20px;
     padding: 40px;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
@@ -224,7 +227,7 @@ blockquote cite {
 
 .leader-card {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     background: var(--secondary-color);
     border-radius: 12px;
     overflow: hidden;
@@ -234,15 +237,13 @@ blockquote cite {
 .leader-image {
     position: relative;
     width: 100%;
-    padding-top: 100%; /* 1:1 Aspect Ratio */
+    height: 320px;
+    padding-top: 0;
 }
 
 .leader-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 320px;
     object-fit: cover;
 }
 
@@ -696,11 +697,12 @@ section {
 
 .leader-card {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-bottom: 0;
 }
 
 /* Funders Section */
@@ -739,6 +741,7 @@ section {
 .testimonial {
     background: #fff;
     padding: 2rem;
+    padding-top: 1rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 0;
@@ -949,7 +952,7 @@ section {
     width: 100%;
     text-align: center;
     color: var(--text-light);
-    margin-top: .35rem;
+    margin-top: 0rem;
     font-style: italic;
 }
 
@@ -1035,7 +1038,7 @@ section {
 .testimonial-subtitle {
   color: var(--accent-color);
   font-size: 1.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: center;
   font-weight: 600;
 }

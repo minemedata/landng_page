@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div class="nav-links">
                     <a href="index.html#features">Features</a>
-                    <a href="team.html">Team</a>
+                    <a href="team.html">About Us</a>
                     <a href="careers.html">Careers</a>
                     <a href="contact.html">Contact Us</a>
                 </div>
             
                 <div class="nav-right">
-                    <a href="demo.html" class="primary-btn" style="text-align: center;">Schedule A Demo</a>
+                    <a href="demo.html" class="primary-btn" style="text-align: center; font-weight: 600;">Schedule Demo</a>
                 </div>
             </div>
         </nav>
@@ -65,6 +65,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 behavior: 'smooth',
                 block: 'start'
             });
+        }
+    });
+
+    // Add event listeners to navigation links for active state
+    const navLinkElements = document.querySelectorAll('.nav-links a');
+
+    // Function to handle link click
+    function handleLinkClick() {
+        // Remove active class from all links
+        navLinkElements.forEach(nav => nav.classList.remove('active'));
+        // Add active class to the clicked link
+        this.classList.add('active');
+    }
+
+    // Attach click event listener to each link
+    navLinkElements.forEach(link => {
+        link.addEventListener('click', handleLinkClick);
+    });
+
+    // Check current URL to set active link on page load
+    const currentPath = window.location.pathname;
+    navLinkElements.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add('active'); // Retain active class for the current page
         }
     });
 }); 

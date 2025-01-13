@@ -2,13 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #0d1172;
-    --secondary-color: #C5F6FF;
-    --accent-color: #f43a61;
-    --background-light: #f8f9fc;
-    --text-primary: #2c3e50;
-    --text-secondary: #64748b;
-    --orange-gradient: #FFB347;
+    --primary-blue: #04048c;
+    --secondary-blue: #496A81;
+    --accent-coral: #c64b4b;
+    --bg-light: #f8f9ff;
+    --text-dark: #2B3A67;
+    --text-light: #666;
     --font-primary: 'Montserrat', sans-serif;
 }
 
@@ -113,16 +112,15 @@ body::before {
     align-items: start; /* Changed from center to start */
 }
 .hero-content-left {
-    padding-top: 120px;  /* Space below navbar */
-    padding-bottom: 60px;  /* Bottom padding for the section */
-    padding-left: 2rem;
-    padding-right: 2rem;
-    text-align: center;    /* Center text */
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    align-items: center;   /* Center flex items */
-    max-width: 1000px;     /* Optional: control maximum width */
-    margin: 0 auto;        /* Center the container */
+    max-width: 100%;
+    margin: 2 auto;
+    font-size: large;
+    padding-top: 6rem;
+    font-family: var(--font-primary);       /* Center the container */
 }
 .hero-content-right {
     padding-top: 5rem; /* Adds space to align with the title */
@@ -135,11 +133,8 @@ body::before {
 }*/
 
 .hero-content-left h1 {
-    font-size: 2.10rem;
-    line-height: 1.2;
-    margin: 0;
-    text-align: center;
-    font-weight: 600;
+    margin-bottom: 2rem;  /* space between heading and subtitle */
+    font-family: var(--font-primary);
 }
 .hero-badge {
     display: inline-block;
