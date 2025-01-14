@@ -487,11 +487,26 @@ body {
 #my-cal-inline {
     position: relative;
     overflow: hidden !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch;
+    height: 760px;
   }
   
   .cal-embed-iframe {
-    overflow: hidden !important;
+    overflow: auto !important;
+    scroll-behavior: auto;
   }
+  #my-cal-inline iframe {
+    overflow: auto !important;
+    height: 100% !important;
+}
+.calendar-wrapper {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: auto;
+    max-height: none;
+}
   
   /* Prevent iframe from causing layout shifts */
   iframe[id^='cal-iframe'] {
