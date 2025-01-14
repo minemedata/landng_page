@@ -4,10 +4,10 @@
 :root {
     --primary-blue: #04048c;
     --secondary-blue: #496A81;
-    --accent-coral: #c64b4b;
+    --accent-color: #f43a61; 
     --bg-light: #f8f9ff;
     --text-dark: #2B3A67;
-    --text-light: #666;
+    --text-light: #4A5568;
     --font-primary: 'Montserrat', sans-serif;
 }
 
@@ -119,6 +119,11 @@
     margin-bottom: 0.5rem;
     font-family: var(--font-primary);
 }
+.department-header p {
+    color: var(--text-light);
+
+
+}
 
 .position-list {
     margin: 1.5rem 0;
@@ -138,7 +143,7 @@
 .department-btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: var(--primary-color);
+    background: var(--accent-color);
     color: var(--white);
     text-decoration: none;
     border-radius: 6px;
@@ -348,7 +353,7 @@
 }
 
 .value-column h3 {
-    color: var(--primary-blue);
+    color: var(--accent-color);
     margin-bottom: 1.5rem;
     text-align: center;
     font-size: 1.5rem;

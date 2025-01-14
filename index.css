@@ -10,6 +10,7 @@
     --accent-coral-light: #c64b4b;
     --accent-purple: #9D7FEA;
     --accent-blue-light: #7FB5EA;
+    --light-text: #4A5568;
     /* Gradient colors with reduced opacity for overlays */
     --gradient-purple: rgba(157, 127, 234, 0.15);
     --gradient-coral: rgba(255, 107, 107, 0.15);
