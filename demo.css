@@ -484,3 +484,18 @@ body {
     background: rgba(43, 58, 103, 0.2);
     transform: translateY(-1px);
 }
+#my-cal-inline {
+    position: relative;
+    overflow: hidden !important;
+  }
+  
+  .cal-embed-iframe {
+    overflow: hidden !important;
+  }
+  
+  /* Prevent iframe from causing layout shifts */
+  iframe[id^='cal-iframe'] {
+    scroll-margin-top: 0 !important;
+    scroll-behavior: auto !important;
+  }
+  

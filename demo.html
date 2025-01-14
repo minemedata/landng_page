@@ -117,26 +117,38 @@
       </div>
     </div>
     <div class="hero-right">
-      <div id="my-cal-inline"></div>
-      <script>
-        // Wait for DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-          // Delay the calendar initialization slightly
-          setTimeout(() => {
+      <div id="my-cal-inline" style="min-height: 100px;"></div>
+      <script>document.addEventListener('DOMContentLoaded', function() {
+        const calContainer = document.getElementById('my-cal-inline');
+        let calInitialized = false;
+      
+        const observer = new IntersectionObserver((entries) => {
+          const entry = entries[0];
+          if (entry.isIntersecting && !calInitialized) {
+            // Initialize Cal only when element is visible
             Cal("inline", {
               elementOrSelector: "#my-cal-inline",
               calLink: "archanas/mineme-demo",
-              autoScroll: false,
               config: {
-                hideEventTypeDetails: false,
+                hideEventTypeDetails: false
               }
             });
-          }, 100);
-
-          // Prevent any automatic scrolling
-          window.history.scrollRestoration = 'manual';
-          window.scrollTo(0, 0);
+            calInitialized = true;
+            observer.disconnect();
+          }
+        }, {
+          threshold: 0.1 // Trigger when 10% of calendar container is visible
         });
+      
+        if (calContainer) {
+          observer.observe(calContainer);
+        }
+      
+        // Prevent automatic scrolling
+        window.history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+      });
+      
       </script>
     </div>
   </div>

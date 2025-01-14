@@ -32,23 +32,61 @@
   <div class="section-container">
     <h2>Our Values</h2>
     <div class="values-grid">
-      <!-- Card 1 -->
-      <div class="value-card">
+      <!-- Uplevel Column -->
+      <div class="value-column">
         <h3>Uplevel</h3>
-        <p><b>Uplevel given to great:</b> We do not allow the constraints of what is given today to dictate what greatness could look like tomorrow.</p>
-        <p><b>Uplevel me through you:</b> We believe diverse perspectives from our peers strengthens our work, our minds, and our mission. Collaboration, iteration, and two-way feedback are celebrated.</p>
+        <div class="value-tile">
+          <button class="tile-header" onclick="toggleContent('uplevel1')">
+            Uplevel given to great +
+          </button>
+          <div id="uplevel1" class="tile-content">
+            <p>We do not allow the constraints of what is given today to dictate what greatness could look like tomorrow.</p>
+          </div>
+          <button class="tile-header" onclick="toggleContent('uplevel2')">
+            Uplevel me through you +
+          </button>
+          <div id="uplevel2" class="tile-content">
+            <p>We believe diverse perspectives from our peers strengthens our work, our minds, and our mission. Collaboration, iteration, and two-way feedback are celebrated.</p>
+          </div>
+        </div>
       </div>
-      <!-- Card 2 -->
-      <div class="value-card">
+
+      <!-- Uplift Column -->
+      <div class="value-column">
         <h3>Uplift</h3>
-        <p><b>Uplift mission over matter:</b> We are consumer-first. Transparency and empowerment guide us, with every decision reflecting, “How would our customer feel?”</p>
-        <p><b>Uplift through challenge to change:</b> We invite bold ideas from every team member, and reward thoughtfulness to collectively create the best solutions. We challenge each other with purpose and openness to create meaningful change.</p>
+        <div class="value-tile">
+          <button class="tile-header" onclick="toggleContent('uplift1')">
+            Uplift mission over matter +
+          </button>
+          <div id="uplift1" class="tile-content">
+            <p>We are consumer-first. Transparency and empowerment guide us, with every decision reflecting, “How would our customer feel?”</p>
+          </div>
+          <button class="tile-header" onclick="toggleContent('uplift2')">
+            Uplift through challenge to change +
+          </button>
+          <div id="uplift2" class="tile-content">
+            <p>We invite bold ideas from every team member, and reward thoughtfulness to collectively create the best solutions. We challenge each other with purpose and openness to create meaningful change.</p>
+          </div>
+        </div>
       </div>
-      <!-- Card 3 -->
-      <div class="value-card">
+
+      <!-- Uphold Column -->
+      <div class="value-column">
         <h3>Uphold</h3>
-        <p><b>Uphold collective commitments:</b> We align on the best possible decision through rigorous discussion and testing. United as a team, we set aside personal biases to fully honor and uphold our agreements.</p>
-        <p><b>Uphold our duty to deliver:</b> We ensure the customer has the best product on the market, the best support, and the most seamless experience. Our duty is to deliver excellence.</p>
+        <div class="value-tile">
+          <button class="tile-header" onclick="toggleContent('uphold1')">
+            Uphold collective commitments +
+          </button>
+          <div id="uphold1" class="tile-content">
+            <p>We align on the best possible decision through rigorous discussion and testing. United as a team, we set aside personal biases to fully honor and uphold our agreements.</p>
+          </div>
+          <button class="tile-header" onclick="toggleContent('uphold2')">
+            Uphold our duty to deliver +
+          </button>
+          <div id="uphold2" class="tile-content">
+            <p>We ensure the customer has the best product on the market, the best support, and the most seamless experience. Our duty is to deliver excellence.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -156,6 +194,20 @@
     </div>
   </div>
 </section>
+<script>
+function toggleContent(id) {
+    const content = document.getElementById(id);
+    const button = content.previousElementSibling;
+    
+    if (content.style.display === "none" || !content.style.display) {
+        content.style.display = "block";
+        button.textContent = button.textContent.replace("+", "-");
+    } else {
+        content.style.display = "none";
+        button.textContent = button.textContent.replace("-", "+");
+    }
+}
+</script>
 <!-- Global CTA Section -->
 <script src="main.js"></script>
 </body>
