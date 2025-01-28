@@ -425,7 +425,7 @@ body::after {
 }
 
 .section-header {
-    background: rgb(201, 27, 27, .3);
+    background: rgb(244, 58, 97, .6);
     padding: 3rem;
     border-radius: 16px;
     text-align: center;
@@ -651,6 +651,7 @@ body::after {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: var(--primary-blue);
+    font-family: var(--font-primary);
 }
 
 
@@ -759,6 +760,7 @@ body::after {
 .integration-content {
     text-align: center;
     margin-bottom: 30px;
+    font-family: var(--font-primary);
 }
 
 .integration-subtitle {
@@ -1098,6 +1100,7 @@ body::after {
     font-weight: 700;
     font-size: 2.6rem;
     z-index: 1;
+    font-family: var(--font-primary);
 }
 
 .accent-text::after {
@@ -1236,6 +1239,7 @@ body::after {
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: var(--primary-blue);
+    font-family: var(--font-primary);
 }
 
 .feature-description {

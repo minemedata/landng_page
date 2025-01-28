@@ -1,4 +1,15 @@
 /* Legal Pages Styling */
+:root {
+    --primary-blue: #04048c;
+    --secondary-blue: #496A81;
+    --accent-color: #f43a61; 
+    --bg-light: #f8f9ff;
+    --text-dark: #2B3A67;
+    --light-text: #4A5568;
+    --font-primary: 'Montserrat', sans-serif;
+}
+
+
 .legal-hero {
     position: relative;
     padding: 120px 0 60px;
@@ -18,11 +29,12 @@
 }
 
 .hero-container {
-    max-width: 800px;
+    max-width: 1500px;
     margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
+    padding: 0 3rem;
+    position: absolute;
     z-index: 1;
+    text-align: center;
 }
 
 .legal-hero h1 {
@@ -31,6 +43,7 @@
     margin-bottom: 1.5rem;
     font-weight: bold;
     line-height: 1.1;
+    text-align: center;
 }
 
 .hero-subtitle {
@@ -56,7 +69,7 @@
 }
 
 .legal-content h3 {
-    color: var(--secondary-blue);
+    color: var(--primary-blue);
     font-size: 2rem;
     margin: 2rem 0 1rem;
     font-weight: 600;
@@ -90,6 +103,13 @@
     position: absolute;
     left: 0;
     font-weight: bold;
+}
+
+.footnote {
+    font-size: 0.9rem;
+    color: lightgray;
+    text-align: center;
+    margin-top: 3rem;
 }
 
 /* Responsive Design */
