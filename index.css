@@ -425,7 +425,7 @@ body::after {
 }
 
 .section-header {
-    background: rgb(244, 58, 97, .6);
+    background: #fdc5e3;
     padding: 3rem;
     border-radius: 16px;
     text-align: center;
