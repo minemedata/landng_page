@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             
                 <div class="nav-right">
+                    <a href="https://app.minemedata.com" class="primary-btn" style="text-align: center; font-weight: 600; margin-right: 10px;">Login</a>
                     <a href="demo.html" class="primary-btn" style="text-align: center; font-weight: 600;">Schedule Demo</a>
                 </div>
             </div>
