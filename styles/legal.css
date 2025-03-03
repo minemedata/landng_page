@@ -12,7 +12,7 @@
 
 .legal-hero {
     position: relative;
-    padding: 120px 0 60px;
+    padding: 100px 0 60px;
     background: linear-gradient(135deg, rgba(43, 58, 103, 0.1), rgba(255, 107, 107, 0.1));
     text-align: center;
 }
@@ -32,7 +32,8 @@
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 3rem;
-    position: absolute;
+    position: relative;
+    width: 100%;
     z-index: 1;
     text-align: center;
 }
