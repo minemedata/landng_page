@@ -720,7 +720,7 @@ body {
     color: white;
     text-align: center;
     border-radius: 12px;
-    height: 55px;
+    height: 50px;
     font-weight: 600;
     text-decoration: none;
     border: none;
@@ -915,5 +915,42 @@ body {
     height: 100%;
     font-family: 'Montserrat', sans-serif !important;
 }
+/* Login Button - Outline Style */
+.nav-right a[href="https://app.minemedata.com"] {
+    background: transparent;
+    border: 2px solid #FF6B6B;
+    color: #FF6B6B;
+    padding: 0.75rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    box-shadow: none;
+}
+
+.nav-right a[href="https://app.minemedata.com"]:hover {
+    background-color: rgba(255, 107, 107, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(198, 75, 75, 0.9);
+}
+
+/* Demo Button - Keep as solid */
+.nav-right a[href="demo.html"] {
+    background: linear-gradient(135deg, #FF6B6B 0%, #c64b4b 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(198, 75, 75, .9);
+}
+
+.nav-right a[href="demo.html"]:hover {
+    transform: translateY(-2px) scale(1.02);
+    background: linear-gradient(135deg, #FF8E8E 0%, #FF6B6B 100%);
+    box-shadow: 0 6px 20px rgba(198, 75, 75, 0.9);
+}
+
 
 
